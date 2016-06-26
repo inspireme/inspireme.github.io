@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html id="J-html" class="">
+<head>
+    <meta charset="UTF-8" />
+    <title>
+        
+            動画配信に関する基礎知識
+        
+    </title>
+    <meta name="generator" content="Jekyll" />
+    <meta name="author" content="whisper" />
+    <meta name="description" content="動画配信に関する基礎知識（VOD, ストリーミングの種類や特徴、HLS/HDSなどの方式や拡張子・コーデック, その他" />
+    <meta name="keywords" content="動画 配信" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="all" href="https://inspireme.github.io/static/style.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="https://inspireme.github.io/static/syntax.css" />
+    <!--[if lt IE 9]>
+    <script src="https://inspireme.github.io/static/js/html5.js" type="text/javascript"></script>
+    <![endif]-->
+    <script src="https://inspireme.github.io/static/js/jquery.js" type="text/javascript"></script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" class="home blog lotus index">
+    <nav class="lotus-nav">
+        <ul>
+            
+            
+            
+            
+            
+            <li class="home ">
+                <a href="/index.html" rel="bookmark" title="Home">
+                    <i class="icon-home"></i>
+                </a>
+                
+            </li>
+            
+            
+            
+            
+            
+            <li class="">
+                <a href="/categories.html" rel="bookmark" title="Categories">
+                    <i class="icon-list-alt"></i>
+                </a>
+                
+            </li>
+            
+            
+            
+            
+            
+            <li class="">
+                <a href="/archives.html" rel="bookmark" title="Archives">
+                    <i class="icon-reorder"></i>
+                </a>
+                
+            </li>
+            
+            
+            
+            
+            
+            <li class="">
+                <a href="/about.html" rel="bookmark" title="About Me">
+                    <i class="icon-user"></i>
+                </a>
+                
+            </li>
+            
+            
+            
+            
+            
+            <li class="">
+                <a href="mailto:cndone@gmail.com" rel="bookmark" title="Contact Me">
+                    <i class="icon-envelope-alt"></i>
+                </a>
+                
+            </li>
+            
+            
+            
+            
+            
+            <li class="">
+                <a href="https://github.com/inspireme" rel="bookmark" title="Github">
+                    <i class="icon-github"></i>
+                </a>
+                
+            </li>
+            
+        </ul>
+    </nav>
+
+    <p class="lotus-breadcrub">
+    <a href="https://inspireme.github.io/index.html" rel="nofollow" rel="nofollow" title="ホームページ">Home</a>
+    <span> &gt; </span>
+    <a href="https://inspireme.github.io/archives.html" rel="nofollow" >Archives</a>
+    <span> &gt; </span>
+    動画配信に関する基礎知識
+</p>
+<h1 class="lotus-pagetit">動画配信に関する基礎知識</h1>
+
+<p class="lotus-meta">Publish: <time class="date" pubdate="June 26, 2016">June 26, 2016</time></p>
+
+<article  itemscope itemtype="http://schema.org/Article" class="lotus-post lotus-post-columns-1">
+<p>動画配信に関する基礎知識（VOD, ストリーミングの種類や特徴、HLS/HDSなどの方式や拡張子・コーデック, その他</p>
+
+<h3 id="section">動画配信に関する基礎知識</h3>
+
+<ul>
+  <li><a href="#vod-ref">VOD</a></li>
+  <li><a href="#stream-ref">ストリーミング</a></li>
+  <li><a href="#hls-ref">HLS</a></li>
+  <li><a href="#hds-ref">HDS</a></li>
+</ul>
+
+<h4> <p id="vod-ref">VOD</p></h4>
+<hr />
+
+<p>ビデオ・オン・デマンド(Video On Demand)とは、視聴者が観たい時に様々な映像コンテンツを視聴することができるサービスである。
+略称「VOD」。別名「電子レンタルビデオ」。 VODにおいて配信されるコンテンツは、公開済の映画や放送済の放送番組、
+オリジナルの映像作品を配信するものもある。 課金方法としては、コンテンツごとに課金するもの（ペイ・パー・ビュー）、
+一定金額を支払えば観放題となるサービスを提供しているものがある。
+<a href="https://ja.wikipedia.org/wiki/%E3%83%93%E3%83%87%E3%82%AA%E3%83%BB%E3%82%AA%E3%83%B3%E3%83%BB%E3%83%87%E3%83%9E%E3%83%B3%E3%83%89">[参考]</a></p>
+
+<h4> <p id="stream-ref">ストリーミング</p></h4>
+<hr />
+
+<p>ストリーミング (streaming) とは、主に音声や動画などのマルチメディアファイルを転送・再生するダウンロード方式の一種である。
+通常、ファイルはダウンロード完了後に開く動作が行われるが、動画のようなサイズの大きいファイルを再生する際にはダウンロードに非常に時間がかかってしまい、特にライブ配信では大きな支障が出る。そこで、ファイルをダウンロードしながら、同時に再生をすることにより、ユーザーの待ち時間が大幅に短縮される。この方式を大まかに「ストリーミング」と称することが多い。
+<a href="https://ja.wikipedia.org/wiki/%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%9F%E3%83%B3%E3%82%B0">[参考]</a></p>
+
+<ul>
+  <li>可能なメディア、音声･動画ファイルの種類</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>拡張子</th>
+      <th>说明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>rm,ra,ram</td>
+      <td>RealAudio/RealVideoストリーム コンテンツ</td>
+    </tr>
+    <tr>
+      <td>rt</td>
+      <td>RealTextストリーム テキスト フォーマット</td>
+    </tr>
+    <tr>
+      <td>rp</td>
+      <td>RealPixストリーム イメージ コンテンツ</td>
+    </tr>
+    <tr>
+      <td>swf</td>
+      <td>Shockwave / Flash</td>
+    </tr>
+    <tr>
+      <td>gif,jpg,png</td>
+      <td>GIF87,GIF89,アニメーション GIF,JPEG,PNG</td>
+    </tr>
+    <tr>
+      <td>mp3</td>
+      <td>MP3方式で圧縮されたオーディオ</td>
+    </tr>
+    <tr>
+      <td>smil,sml</td>
+      <td>Smilファイル</td>
+    </tr>
+    <tr>
+      <td>mpg,mpeg</td>
+      <td>標準的なMPEGレイヤー1,レイヤー2のビデオ</td>
+    </tr>
+    <tr>
+      <td>wav,aiff,au</td>
+      <td>Windos / Macintoch / UNIX の標準的なサウンドファイル</td>
+    </tr>
+    <tr>
+      <td>avi</td>
+      <td>Audio / Video インターリーブ(Microsoftビデオフォーマット)</td>
+    </tr>
+    <tr>
+      <td>asf</td>
+      <td>NetShowファイル</td>
+    </tr>
+    <tr>
+      <td>wmv,wma</td>
+      <td>Windows Media ファイル</td>
+    </tr>
+    <tr>
+      <td>mov</td>
+      <td>Quicktimeムービー</td>
+    </tr>
+    <tr>
+      <td>mid,midi,rmi</td>
+      <td>Midiサウンドファイル</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>ストリーミング</li>
+</ul>
+
+<p>ストリーミングは、従来のダウンロード再生と違い、まずメタファイルをユーザーのパソコンにダウンロードし、
+音声・動画ファイルをダウンロードしながら同時に再生するため、再生までの待ち時間がほとんどありません。 
+再生時間の長い大容量の音声・動画ファイルでも、ユーザーに負担をかけません。 また、ナローバンド用、
+ブロードバンド用にエンコードした音声・動画ファイルを用意し、ユーザーが自身の環境にあった音声・動画ファイルを選択できるようにしておくと親切です。<br />
+この「ストリーミング」は、プログレッシブダウンロード再生とリアルタイムストリーミング再生の2つの再生方法に分けられます。<a href="http://phpjavascriptroom.com/?t=strm&amp;p=40">[参考]</a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>再生方法</th>
+      <th>说明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>従来のダウンロード再生</td>
+      <td>HTTPサーバーから再生する音声・動画ファイル全体をユーザーのパソコン<br />に完全にダウンロードしてから再生が始まります。<br /> そのため、再生時間の長い大容量の音声・動画ファイルほど再生まで待ち時間がかかり、<br />ナローバンドユーザーには負担がかかります。<br />また、ユーザーのパソコンに再生したファイルが残るため、二次配布される可能性があります。著作権のあるファイルの再生には不向きです。</td>
+    </tr>
+    <tr>
+      <td>プログレッシブダウンロード再生(擬似ストリーミング再生)</td>
+      <td>音声・動画ファイルをHTTPサーバーまたはストリーミングサーバーからストリーミング再生します。<br /> 音声・動画ファイルをユーザーのパソコンにダウンロードしつながら同時に再生が始まるため、再生までの待ち時間がほとんどありません。<br />ただし、再生したファイルがユーザーのパソコンに残るため、擬似ストリーミング再生になります。 <br />著作権のない音声・動画ファイルを個人サイトからストリーミングするのに適した再生方法です。</td>
+    </tr>
+    <tr>
+      <td>リアルストリーミング再生</td>
+      <td>音声・動画ファイルをストリーミングサーバーから、リアルタイムでストリーミング再生します。<br /> ライブ配信は、この再生方法によるものです。まず再生される前にファイルの一部がダウンロードされ、バッファに格納されます。<br /> そのバッファされたファイルを再生するため、再生した音声・動画ファイルがユーザーのパソコンに残りません。 <br />そういったことからリアルタイム形式は、著作権のある音声・動画ファイルの二次配布防止になります。<br /> また、インターネットが混雑してダウンロードが中断しても、バッファに格納したデータを使えるため、<br />音声・動画ファイルの再生が止まってしまう可能性が低くなります。ストリーミングサーバーをレンタルする必要があります。 通常のHTTPサーバーからはできません。<br />（ストリーミングサーバは、プレイヤに<mark>ストリーミングデータを小分けにして</mark>送信します。 クライアント側ではデータを受取ながら再生し再生し終ったデータは破棄する というシステムを使用しています。 そのために、Ｗｅｂサーバーからのダウンロードとは異なり､データが保存されません。 ）</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5> <p id="hls-ref"> HLS</p></h5>
+<hr />
+
+<p>HLSという名称は、“HTTPライブストリーミング”を意味する英語「HTTP Live Streaming」の略から来ています。
+Appleが自社のiOS端末に向けに開発したHTTPによるメディア配信の規格です。</p>
+
+<ul>
+  <li>ネット環境に応じて低ビットレート</li>
+</ul>
+
+<p>一方、HLSでは、エンコーダーによってデジタルデータ化された映像・音声信号をファイル化する際に、10秒単位の「<strong>MPEG-2 TS</strong>」として細切れにし、暗号化して、小さな連続したファイルを作ります。ちなみにエンコーダーは、デジタルデータの作成時に、ビットレートに応じたいくつかのバリエーションを作っておきます。
+<br />
+そして、この<strong>[細切れ]</strong>になった「MPEG-2 TS」ファイルの再生順や、暗号化の鍵、コンテンツのバリエーションなどを書き込んだ<mark>M3U8形式の「プレイリスト」</mark>に記載しておきます。そして、これらをWebサーバーから配信する、という仕組みになっています。
+<br />
+再生側では、Webサーバーから「プレイリスト」を受け取り、動画のファイル構成か確認します。<mark>通信速度に合わせて、複数のバリエーションが用意されたファイルのうち</mark>、最適なものを選んで、細切れになった映像ファイルを1つずつダウンロードして再生します。</p>
+
+<ul>
+  <li>メリット</li>
+</ul>
+
+<p>1)サーバーと再生側（クライアント）との間の通信速度が速かったり、あるいは遅かったりしても、適切な動画ファイルで再生できるのです。
+<br />
+2)プレイリストをたどることでエンドユーザーが簡単に巻き戻し操作をすることもできます。
+<br />
+3)Webの配信に使われる「HTTP」というプロトコルが使われることです。（従来の動画ストリーミングでは、RTP（Real-time Transport Protocol）など、UDP（User Datagram Protocol）ベースのプロトコルが使われてきました）
+配信側は特別なサーバーを用意する必要がありません。特定のプロトコルを遮断するネットワークでも、Webブラウジングができるなら、HLS形式の動画を楽しめることになります</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>配信のワークフロー</th>
+            <th>说明</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>コンテンツの準備</td>
+          <td>Input Containers:　 F4V　F4F　F4M　 MP4　FLV <br />Video: <br />iPhone and iPod touch--H.264 Baseline Profile Level 3.0<br />　iPhone and iPad--Main Profile Level 3.1<br />Audio:  HE-AAC or AAC-LC up to 48 kHz, stereo audio
+		  </td>
+        </tr>
+		<tr>
+          <td>コンテンツの再パッケージ化</td>
+          <td>用意したメディアファイルをmpeg2-tsに再パッケージ化します。</td>
+        </tr>
+		<tr>
+          <td>再パッケージされたコンテンツのセグメント化</td>
+          <td>時間幅が均等な短いメディアファイルの連続体にセグメント化/分割化します。<br />Appleはこの分割するコンテンツの長さは<code>10秒</code>を推奨としていますが、変更は可能です。セグメント化されたn.tsファイルの他に2つのm3u8ファイルが生成されます。
+これらは個々のメディアファイルへのリファレンスを含むマスター及びインデックス・ファイルとなっております。<img src="/static/images/HLS-thumb-1403x734-481.png" alt="HLS.png" height="261" width="504" /><br />
+          </td>
+        </tr>
+		<tr>
+          <td>ビデオストリームからオーディオトラックを抽出(Optional)</td>
+          <td> </td>
+        </tr>
+		<tr>
+          <td>端末からHTTPによるリクエスト</td>
+          <td>クライアント端末はまずこのマスターファイルをGETし、記載されているリンクのhigh,mid,lowの中から適切なインデックスファイルを取得します。
+通常は一番低いレートから取得し、帯域に余裕があれば高いレートのファイルを取得するようPlayer側で判断されます。
+これがAdaptive bitrate streamingと呼ばれる機能です。
+インデックスファイルには実際のtsファイルへのリンクが記載されていますので、最新(一番下)のtsファイルを取得する事でLive映像が視聴可能となります。</td>
+        </tr>		
+	</tbody>	
+</table>
+
+<h5> <p id="hds-ref"> HDS</p></h5>
+<hr />
+
+<p>HLSという名称は、英語「HTTP Dynamic Streaming」の略から来ています。
+HLSとHDSは似たような名前で区別がつきにくいですが、HLS=Apple, HDS=Adobeの規格であり、HTTPによる動画配信技術という点では同一です。
+ただし、その中身はそれぞれ異なります。<br />HDSもHLS同様メディアファイルをセグメント化/分割化します。
+Adobeはセグメント長の推奨値を<code>６秒</code>としていますが、こちらも変更は可能です。</p>
+
+<ul>
+  <li>HDS配信可能なCodec一覧</li>
+</ul>
+
+<p><img alt="HDS_Codec.png" src="/static/images/HDS_Codec.png" height="217" width="467" /></p>
+
+<ul>
+  <li>ファイル分割(動画変換)(小分け)</li>
+</ul>
+
+<p>変換ツール：f4fpackager</p>
+
+<div class="language-scala highlighter-rouge"><pre class="highlight"><code><span class="o">./</span><span class="n">f4fpackager</span> <span class="o">--</span><span class="n">input</span><span class="o">-</span><span class="n">file</span> <span class="n">変換元動画</span> <span class="o">--</span><span class="n">output</span><span class="o">-</span><span class="n">file</span> <span class="n">変換後動画情報を書出すディレクトリ</span>
+
+<span class="n">可変ビットレート対応にするには</span>
+<span class="n">f4fpackager</span> <span class="o">--</span><span class="n">input</span><span class="o">-</span><span class="n">file</span><span class="k">=</span><span class="n">sample1_150kbps</span><span class="o">.</span><span class="n">f4v</span> <span class="o">--</span><span class="n">bitrate</span><span class="k">=</span><span class="mi">150</span>
+<span class="n">f4fpackager</span> <span class="o">--</span><span class="n">input</span><span class="o">-</span><span class="n">file</span><span class="k">=</span><span class="n">sample1_700kbps</span><span class="o">.</span><span class="n">f4v</span> <span class="o">--</span><span class="n">manifest</span><span class="o">-</span><span class="n">file</span><span class="k">=</span><span class="n">sample1_150kbps</span><span class="o">.</span><span class="n">f4m</span> <span class="o">--</span><span class="n">bitrate</span><span class="k">=</span><span class="mi">700</span>
+<span class="n">f4fpackager</span> <span class="o">--</span><span class="n">input</span><span class="o">-</span><span class="n">file</span><span class="k">=</span><span class="n">sample1_1500kbps</span><span class="o">.</span><span class="n">f4v</span> <span class="o">--</span><span class="n">manifest</span><span class="o">-</span><span class="n">file</span><span class="k">=</span><span class="n">sample1_700kbps</span><span class="o">.</span><span class="n">f4m</span> <span class="o">--</span><span class="n">bitrate</span><span class="k">=</span><span class="mi">1500</span>
+</code></pre>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>拡張子</th>
+      <th>说明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>f4f</td>
+      <td>　動画ファイル本体。内部はセグメントに分割されている<br /></td>
+    </tr>
+    <tr>
+      <td>f4m</td>
+      <td>　マニフェストファイル。この中に動画情報が格納されており、可変ビットレートやライセンス管理の情報も記述される<br /></td>
+    </tr>
+    <tr>
+      <td>f4x</td>
+      <td>　インデックスファイル。Playerから要求される各フラグメントファイルのf4fファイル中でのインデックスを持っている<br /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>以上の3つのファイルを生成します
+<br /></p>
+
+<p>具体的なサーバでの処理の流れと導入はご<a href="http://d.conma.me/entry/20100622/1277200563">[参考]</a><br /></p>
+
+<ul>
+  <li>関連資料：</li>
+</ul>
+
+<p><a href="http://phpjavascriptroom.com/?t=strm&amp;p=41">埋め込みタグをJavaScript化（IE対策）</a>
+<br />
+<a href="http://phpjavascriptroom.com/?t=strm">Windows Media Player,RealPlayer,QuickTime動画配信ついて</a>
+<br /></p>
+
+
+</article>
+	
+<p class="lotus-anno">Disclaimer: This article is based on  <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="nofollow" target="_blank" title="表示-非営利-継承">BY-NC-SA</a> license. Reproduced please specify switched from: <a href="" title="" rel="nofollow">whisper</a></p>
+    
+<section class="lotus-nextpage fn-clear">
+    
+    <div class="lotus-nextpage-left"><a class="prev" href="/ilotus/java/2016/06/01/markdown-roll.html" rel="prev">&laquo;&nbsp;markdown 语法学习</a></div>
+    
+    
+</section>
+
+
+<footer class="lotus-footer">
+	<p>Copyright © 2011–2016 whisper All rights reserved. Design by <a href="http://www.zhanxin.info" target="_blank">zhanxin</a>.</p>
+</footer>
+<script src="https://inspireme.github.io/static/js/jquery.scrollTo.js" type="text/javascript"></script>
+<script src="https://inspireme.github.io/static/js/iLotus.js" type="text/javascript"></script>
+</body>
+</html>

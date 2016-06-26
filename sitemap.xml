@@ -1,75 +1,42 @@
+---
+---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!--  Homepage -->
   <url>
-    <loc>https://inspireme.github.io/</loc>
-    <lastmod>2016-06-26</lastmod>
+    <loc>{{ site.url }}/</loc>
+    <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
-  
+  {% for page in site.posts %}
   <url>
-    <loc>https://inspireme.github.io/ilotus/java/2016/06/01/markdown-roll.html</loc>
-    
-    <lastmod>2016-06-01</lastmod>
-    
+    <loc>{{ site.url }}{{ page.url }}</loc>
+    {% if page.last_updated %}
+    <lastmod>{{ page.last_updated | date: "%Y-%m-%d" }}</lastmod>
+    {% elsif page.date %}
+    <lastmod>{{ page.date | date: "%Y-%m-%d" }}</lastmod>
+    {% else %}
+    <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
+    {% endif %}
   </url>
-  
-  <url>
-    <loc>https://inspireme.github.io/ilotus/2015/01/04/iLotus.html</loc>
-    
-    <lastmod>2015-01-04</lastmod>
-    
-  </url>
-  
+  {% endfor %}
 
-  
+  {% for page in site.html_pages %}
   <url>
-    <loc>https://inspireme.github.io/about.html</loc>
-    
-    <lastmod>2016-06-26</lastmod>
-    
-    
-    
+    <loc>{{ site.url }}{{ page.url }}</loc>
+    {% if page.last_updated %}
+    <lastmod>{{ page.last_updated | date: "%Y-%m-%d" }}</lastmod>
+    {% elsif page.date %}
+    <lastmod>{{ page.date | date: "%Y-%m-%d" }}</lastmod>
+    {% else %}
+    <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
+    {% endif %}
+    {% if page.changefreq %}<changefreq>{{ page.changefreq }}</changefreq>{% endif %}
+    {% if page.priority %}<priority>{{ page.priority }}</priority>{% endif %}
   </url>
-  
-  <url>
-    <loc>https://inspireme.github.io/archives.html</loc>
-    
-    <lastmod>2016-06-26</lastmod>
-    
-    
-    
-  </url>
-  
-  <url>
-    <loc>https://inspireme.github.io/categories.html</loc>
-    
-    <lastmod>2016-06-26</lastmod>
-    
-    
-    
-  </url>
-  
-  <url>
-    <loc>https://inspireme.github.io/</loc>
-    
-    <lastmod>2016-06-26</lastmod>
-    
-    
-    
-  </url>
-  
-  <url>
-    <loc>https://inspireme.github.io/links.html</loc>
-    
-    <lastmod>2016-06-26</lastmod>
-    
-    
-    
-  </url>
-  
+  {% endfor %}
 
 </urlset>

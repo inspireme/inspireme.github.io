@@ -1,0 +1,170 @@
+# Where things are
+source: .
+destination: ./_site
+plugins_dir: ./_plugins
+layouts_dir: ./_layouts
+data_dir: ./_data
+includes_dir: ./_includes
+collections: null
+
+# Handling Reading
+safe: false
+include: [".htaccess"]
+exclude: []
+keep_files: [".git", ".svn"]
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+textile_ext:  "textile"
+
+# Filtering Content
+show_drafts: null
+limit_posts: 0
+future: true
+unpublished: false
+
+# Plugins
+whitelist: []
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+# Serving
+detach: false
+port: 4000
+host: 127.0.0.1
+baseurl: "" # does not include hostname
+
+# Outputting
+permalink: date
+timezone: Asia/Tokyo
+
+#pagination
+gems: [jekyll-paginate]
+paginate: 8
+paginate_path: "page:num"
+
+quiet: false
+defaults: []
+
+# Markdown Processors
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+  coderay:
+    coderay_wrap: div
+    coderay_line_numbers: inline
+    coderay_line_number_start: 1
+    coderay_tab_width: 4
+    coderay_bold_every: 10
+    coderay_css: style
+
+#iLotus configs
+iLotus:
+  columns: 1
+  begin: 2011
+
+#站点基础配置
+title: whisper
+subTitle: Something inspires me
+description: whisperのworkspace
+url: https://inspireme.github.io
+#url: http://127.0.0.1:4000
+feed: /feed.xml
+favicon: /static/images/shortcut.jpg
+
+#菜单配置
+nav:
+  - text: Home
+    url: /index.html
+    icon: icon-home
+    class: home
+  - text: Categories
+    url: /categories.html
+    icon: icon-list-alt
+    class: none
+  - text: Archives
+    url: /archives.html
+    icon: icon-reorder
+    class: none	
+  - text: About Me
+    url: /about.html
+    icon: icon-user
+    class: none	
+  - text: Contact Me
+    url: mailto:cndone@gmail.com
+    icon: icon-envelope-alt
+    class: none
+  - text: Github
+    url: https://github.com/inspireme
+    icon: icon-github
+    class: none
+
+page:
+  - text: Categories
+    url: /categories.html
+    last: true
+  - text: Archives
+    url: /archives.html
+    last: true
+  - text: Links
+    url: /links.html
+    last: true
+  - text: About
+    url: /about.html
+    last: false
+
+#Author config
+author:
+    name: whisper
+    email: cndone@gmail.com
+    imageLink: /static/images/header.jpg
+    simpleIntro: Whisper
+    detailIntro:
+      <p>Out of the night that covers me,</p>
+      <p>Black as the Pit from pole to pole,</p>
+      <p>I thank whatever gods may be,  </p>
+      <p>For my unconquerable soul,  </p>
+      <p>In the fell clutch of circumstance  </p>
+      <p>I have not winced or cried aloud.  </p>
+      <p>Under the bludgeonings of chance  </p>
+      <p>......  </p>
+      <p>And yet the menace of the years  </p>
+      <p>Finds, and shall find, me unafraid  </p>
+      <p>It matters not how strait the gate,  </p>
+      <p>How charged with punishments the scroll,  </p>
+      <p>I am the master of my fate, </p>
+      <p>I am the captain of my soul.  </p>
+      <p></p>
+#Links
+customLinks:
+  - item:
+    - text: Done
+      url: http://cn-done.iteye.com/
+    - text: InfoQ
+      url: https://www.infoq.com/
+    - text: 51CTO
+      url: http://blog.51cto.com/
+    message: Friends    
+  - item:
+    - text: hishidama
+      url: http://www.ne.jp/asahi/hishidama/home/tech/
+    - text: atmarkit
+      url: http://www.atmarkit.co.jp/
+    - text: IBM
+      url: http://www.ibm.com/developerworks/jp/
+    - text: oracle
+      url: http://www.oracle.com/jp/index.html
+    - text: linux
+      url: http://www.linuxprobe.com
+    - text: phpjs
+      url: http://phpjavascriptroom.com/
+    message: Technology
