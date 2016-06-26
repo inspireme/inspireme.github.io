@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html id="J-html" class="">
+<head>
+    <meta charset="UTF-8" />
+    <title>
+        
+            Java构造器和枚举的初始化
+        
+    </title>
+    <meta name="generator" content="Jekyll" />
+    <meta name="author" content="whisper" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="all" href="http://localhost:4000/static/style.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="http://localhost:4000/static/syntax.css" />
+    <!--[if lt IE 9]>
+    <script src="http://localhost:4000/static/js/html5.js" type="text/javascript"></script>
+    <![endif]-->
+    <script src="http://localhost:4000/static/js/jquery.js" type="text/javascript"></script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" class="home blog lotus index">
+    <nav class="lotus-nav">
+        <ul>
+            
+            
+            
+            
+            
+            <li class="home ">
+                <a href="/index.html" rel="bookmark" title="Home">
+                    <i class="icon-home"></i>
+                </a>
+                
+            </li>
+            
+            
+            
+            
+            
+            <li class="">
+                <a href="/categories.html" rel="bookmark" title="Categories">
+                    <i class="icon-list-alt"></i>
+                </a>
+                
+            </li>
+            
+            
+            
+            
+            
+            <li class="">
+                <a href="/archives.html" rel="bookmark" title="Archives">
+                    <i class="icon-reorder"></i>
+                </a>
+                
+            </li>
+            
+            
+            
+            
+            
+            <li class="">
+                <a href="/about.html" rel="bookmark" title="About Me">
+                    <i class="icon-user"></i>
+                </a>
+                
+            </li>
+            
+            
+            
+            
+            
+            <li class="">
+                <a href="mailto:cndone@gmail.com" rel="bookmark" title="Contact Me">
+                    <i class="icon-envelope-alt"></i>
+                </a>
+                
+            </li>
+            
+            
+            
+            
+            
+            <li class="">
+                <a href="https://github.com/inspireme" rel="bookmark" title="Github">
+                    <i class="icon-github"></i>
+                </a>
+                
+            </li>
+            
+        </ul>
+    </nav>
+
+    <p class="lotus-breadcrub">
+    <a href="http://localhost:4000/index.html" rel="nofollow" rel="nofollow" title="ホームページ">Home</a>
+    <span> &gt; </span>
+    <a href="http://localhost:4000/archives.html" rel="nofollow" >Archives</a>
+    <span> &gt; </span>
+    Java构造器和枚举的初始化
+</p>
+<h1 class="lotus-pagetit">Java构造器和枚举的初始化</h1>
+
+<p class="lotus-meta">Publish: <time class="date" pubdate="January  4, 2015">January  4, 2015</time></p>
+
+<article  itemscope itemtype="http://schema.org/Article" class="lotus-post lotus-post-columns-1">
+<p>最近读完了ThinkInJava的第5章初始化与清理，在这里做下简单的总结，以加深影响。</p>
+
+<h3 id="section">构造器初始化</h3>
+<p>无论创建多少个对象，静态数据都只占用一份存储区域。static关键字不能应用于局部变量，因此它只能作用于域。来看下面的例子：</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">Bowl</span> <span class="o">{</span>
+  <span class="n">Bowl</span><span class="o">(</span><span class="kt">int</span> <span class="n">marker</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">print</span><span class="o">(</span><span class="s">"Bowl("</span> <span class="o">+</span> <span class="n">marker</span> <span class="o">+</span> <span class="s">")"</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="kt">void</span> <span class="nf">f1</span><span class="o">(</span><span class="kt">int</span> <span class="n">marker</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">print</span><span class="o">(</span><span class="s">"f1("</span> <span class="o">+</span> <span class="n">marker</span> <span class="o">+</span> <span class="s">")"</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">class</span> <span class="nc">Table</span> <span class="o">{</span>
+  <span class="kd">static</span> <span class="n">Bowl</span> <span class="n">bowl1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Bowl</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span>
+  <span class="n">Table</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">print</span><span class="o">(</span><span class="s">"Table()"</span><span class="o">);</span>
+    <span class="n">bowl2</span><span class="o">.</span><span class="na">f1</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="kt">void</span> <span class="nf">f2</span><span class="o">(</span><span class="kt">int</span> <span class="n">marker</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">print</span><span class="o">(</span><span class="s">"f2("</span> <span class="o">+</span> <span class="n">marker</span> <span class="o">+</span> <span class="s">")"</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="kd">static</span> <span class="n">Bowl</span> <span class="n">bowl2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Bowl</span><span class="o">(</span><span class="mi">2</span><span class="o">);</span>
+<span class="o">}</span>
+
+<span class="kd">class</span> <span class="nc">Cupboard</span> <span class="o">{</span>
+  <span class="n">Bowl</span> <span class="n">bowl3</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Bowl</span><span class="o">(</span><span class="mi">3</span><span class="o">);</span>
+  <span class="kd">static</span> <span class="n">Bowl</span> <span class="n">bowl4</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Bowl</span><span class="o">(</span><span class="mi">4</span><span class="o">);</span>
+  <span class="n">Cupboard</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">print</span><span class="o">(</span><span class="s">"Cupboard()"</span><span class="o">);</span>
+    <span class="n">bowl4</span><span class="o">.</span><span class="na">f1</span><span class="o">(</span><span class="mi">2</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="kt">void</span> <span class="nf">f3</span><span class="o">(</span><span class="kt">int</span> <span class="n">marker</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">print</span><span class="o">(</span><span class="s">"f3("</span> <span class="o">+</span> <span class="n">marker</span> <span class="o">+</span> <span class="s">")"</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="kd">static</span> <span class="n">Bowl</span> <span class="n">bowl5</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Bowl</span><span class="o">(</span><span class="mi">5</span><span class="o">);</span>
+<span class="o">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">StaticInitialization</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">print</span><span class="o">(</span><span class="s">"Creating new Cupboard() in main"</span><span class="o">);</span>
+    <span class="k">new</span> <span class="nf">Cupboard</span><span class="o">();</span>
+    <span class="n">print</span><span class="o">(</span><span class="s">"Creating new Cupboard() in main"</span><span class="o">);</span>
+    <span class="k">new</span> <span class="nf">Cupboard</span><span class="o">();</span>
+    <span class="n">table</span><span class="o">.</span><span class="na">f2</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span>
+    <span class="n">cupboard</span><span class="o">.</span><span class="na">f3</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="kd">static</span> <span class="n">Table</span> <span class="n">table</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Table</span><span class="o">();</span>
+  <span class="kd">static</span> <span class="n">Cupboard</span> <span class="n">cupboard</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Cupboard</span><span class="o">();</span>
+<span class="o">}</span> </code></pre></figure>
+
+<p>Output:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Bowl</span><span class="o">(</span><span class="mi">1</span><span class="o">)</span>
+<span class="n">Bowl</span><span class="o">(</span><span class="mi">2</span><span class="o">)</span>
+<span class="n">Table</span><span class="o">()</span>
+<span class="n">f1</span><span class="o">(</span><span class="mi">1</span><span class="o">)</span>
+<span class="n">Bowl</span><span class="o">(</span><span class="mi">4</span><span class="o">)</span>
+<span class="n">Bowl</span><span class="o">(</span><span class="mi">5</span><span class="o">)</span>
+<span class="n">Bowl</span><span class="o">(</span><span class="mi">3</span><span class="o">)</span>
+<span class="n">Cupboard</span><span class="o">()</span>
+<span class="n">f1</span><span class="o">(</span><span class="mi">2</span><span class="o">)</span>
+<span class="n">Creating</span> <span class="k">new</span> <span class="nf">Cupboard</span><span class="o">()</span> <span class="n">in</span> <span class="n">main</span>
+<span class="nf">Bowl</span><span class="o">(</span><span class="mi">3</span><span class="o">)</span>
+<span class="n">Cupboard</span><span class="o">()</span>
+<span class="n">f1</span><span class="o">(</span><span class="mi">2</span><span class="o">)</span>
+<span class="n">Creating</span> <span class="k">new</span> <span class="nf">Cupboard</span><span class="o">()</span> <span class="n">in</span> <span class="n">main</span>
+<span class="nf">Bowl</span><span class="o">(</span><span class="mi">3</span><span class="o">)</span>
+<span class="n">Cupboard</span><span class="o">()</span>
+<span class="n">f1</span><span class="o">(</span><span class="mi">2</span><span class="o">)</span>
+<span class="n">f2</span><span class="o">(</span><span class="mi">1</span><span class="o">)</span>
+<span class="n">f3</span><span class="o">(</span><span class="mi">1</span><span class="o">)</span></code></pre></figure>
+
+<p>由输出可见，静态初始化只有在必要时刻才会进行。如果不创建Table对象，也不引用Table.b1或Table.b2,那么静态的Bowl b1和b2永远都不会创建。只有在第一个Table对象被创建(或者第一次访问静态数据)的时候，它们才会被初始化。此后，静态对象不会再被初始化。
+初始化的顺序是先静态对象，而后是“非静态”对象。从输出结果中可以看到这一点。要执行main()静态方法，必须加载StaticInitialization类，然后其静态域table和cupboard被初始化，这将导致它们对应的类也被加载，并且它们也都包含静态bowl对象，因此bowl随后也被加载。
+总结一下对象的创建过程，假设有个名为Dog的类：</p>
+
+<ol>
+  <li>即使没有显式地使用static关键字，构造器实际上也是静态方法。因此，当首次创建类型为Dog的对象时，或者Dog类的静态方法或静态域首次被访问时，java解释器必须查找类路径，以定位Dog.class文件。</li>
+  <li>然后载入Dog.class，有关静态初始化的所有动作读都会执行。因此，静态初始化只在Class对象首次加载的时候进行一次。</li>
+  <li>当用new Dog()创建对象的时候，首先将在堆上为Dog对象分配足够的存储空间。</li>
+  <li>这块存储空间会被清零，这就自动地将Dog对象中的所用基本类型数据都设置成了默认值，而引用则被设置成了null。</li>
+  <li>执行所用出现于字段定义处的初始化动作。</li>
+  <li>执行构造器。这里面又涉及到很多动作，如继承的时候。</li>
+</ol>
+
+<h3 id="section-1">枚举初始化</h3>
+<p>在创建enum时，编译器会自动添加一些有用的特性。例如，它会创建toString()方法，以便可以很方便地显示某个enum实例。编译器还会创建ordinal()方法，用来表示某个特定enum常量的声明顺序，以及static values()方法，用来按照enum常量的声明顺序，产生由这些常量值构成的数组。
+enum关键字只是为生成对应的类时，产生了某些编译器行为，因此很大程度上，可以将enum当作其他任何类处理。</p>
+
+<p>原创文章转载请注明出处：<a href="http://www.9leg.com/java/2015/01/04/constructor-init.html">Java构造器和枚举的初始化</a></p>
+
+</article>
+	
+<p class="lotus-anno">Disclaimer: This article is based on  <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="nofollow" target="_blank" title="表示-非営利-継承">BY-NC-SA</a> license. Reproduced please specify switched from: <a href="" title="" rel="nofollow">whisper</a></p>
+    
+<section class="lotus-nextpage fn-clear">
+    
+    <div class="lotus-nextpage-left"><a class="prev" href="/java/2015/01/01/how-to-properly-use-this.html" rel="prev">&laquo;&nbsp;this的由来和正确的使用方式</a></div>
+    
+    
+    <div class="lotus-nextpage-right"><a class="next" href="/java/2015/01/07/final-keyword.html" rel="next">Java的final关键字&nbsp;&raquo;</a></div>
+    
+</section>
+
+
+<footer class="lotus-footer">
+	<p>Copyright © 2011–2016 whisper All rights reserved. Design by <a href="http://www.zhanxin.info" target="_blank">zhanxin</a>.</p>
+</footer>
+<script src="http://localhost:4000/static/js/jquery.scrollTo.js" type="text/javascript"></script>
+<script src="http://localhost:4000/static/js/iLotus.js" type="text/javascript"></script>
+</body>
+</html>

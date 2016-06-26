@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html id="J-html" class="">
+<head>
+    <meta charset="UTF-8" />
+    <title>
+        
+            快学scala笔记——数组相关操作
+        
+    </title>
+    <meta name="generator" content="Jekyll" />
+    <meta name="author" content="whisper" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="all" href="http://localhost:4000/static/style.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="http://localhost:4000/static/syntax.css" />
+    <!--[if lt IE 9]>
+    <script src="http://localhost:4000/static/js/html5.js" type="text/javascript"></script>
+    <![endif]-->
+    <script src="http://localhost:4000/static/js/jquery.js" type="text/javascript"></script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" class="home blog lotus index">
+    <nav class="lotus-nav">
+        <ul>
+            
+            
+            
+            
+            
+            <li class="home ">
+                <a href="/index.html" rel="bookmark" title="Home">
+                    <i class="icon-home"></i>
+                </a>
+                
+            </li>
+            
+            
+            
+            
+            
+            <li class="">
+                <a href="/categories.html" rel="bookmark" title="Categories">
+                    <i class="icon-list-alt"></i>
+                </a>
+                
+            </li>
+            
+            
+            
+            
+            
+            <li class="">
+                <a href="/archives.html" rel="bookmark" title="Archives">
+                    <i class="icon-reorder"></i>
+                </a>
+                
+            </li>
+            
+            
+            
+            
+            
+            <li class="">
+                <a href="/about.html" rel="bookmark" title="About Me">
+                    <i class="icon-user"></i>
+                </a>
+                
+            </li>
+            
+            
+            
+            
+            
+            <li class="">
+                <a href="mailto:cndone@gmail.com" rel="bookmark" title="Contact Me">
+                    <i class="icon-envelope-alt"></i>
+                </a>
+                
+            </li>
+            
+            
+            
+            
+            
+            <li class="">
+                <a href="https://github.com/inspireme" rel="bookmark" title="Github">
+                    <i class="icon-github"></i>
+                </a>
+                
+            </li>
+            
+        </ul>
+    </nav>
+
+    <p class="lotus-breadcrub">
+    <a href="http://localhost:4000/index.html" rel="nofollow" rel="nofollow" title="ホームページ">Home</a>
+    <span> &gt; </span>
+    <a href="http://localhost:4000/archives.html" rel="nofollow" >Archives</a>
+    <span> &gt; </span>
+    快学scala笔记——数组相关操作
+</p>
+<h1 class="lotus-pagetit">快学scala笔记——数组相关操作</h1>
+
+<p class="lotus-meta">Publish: <time class="date" pubdate="March 13, 2016">March 13, 2016</time></p>
+
+<article  itemscope itemtype="http://schema.org/Article" class="lotus-post lotus-post-columns-1">
+<ul>
+  <li>长度不变的数组</li>
+</ul>
+
+<div class="language-scala highlighter-rouge"><pre class="highlight"><code>
+<span class="k">val</span> <span class="n">nums</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">Array</span><span class="o">[</span><span class="kt">Int</span><span class="o">](</span><span class="mi">10</span><span class="o">)</span>
+
+</code></pre>
+</div>
+
+<ul>
+  <li>已提供初始值就不需要new</li>
+</ul>
+
+<div class="language-scala highlighter-rouge"><pre class="highlight"><code>
+<span class="err">﻿</span><span class="k">val</span> <span class="n">s</span> <span class="k">=</span> <span class="nc">Array</span><span class="o">(</span><span class="s">"java"</span><span class="o">,</span><span class="s">"scala"</span><span class="o">)</span>
+
+</code></pre>
+</div>
+
+<ul>
+  <li>使用()而不是[]访问元素</li>
+</ul>
+
+<div class="language-scala highlighter-rouge"><pre class="highlight"><code>
+<span class="n">s</span><span class="o">(</span><span class="mi">0</span><span class="o">)</span> <span class="k">=</span> <span class="s">"github"</span>
+
+</code></pre>
+</div>
+
+<ul>
+  <li>
+    <p>在jvm中，scala的Array以java数组方式实现</p>
+  </li>
+  <li>
+    <p>变长数组，数组缓冲</p>
+  </li>
+</ul>
+
+<div class="language-scala highlighter-rouge"><pre class="highlight"><code>
+<span class="k">val</span> <span class="n">ab</span> <span class="k">=</span> <span class="nc">ArrayBuffer</span><span class="o">[</span><span class="kt">Int</span><span class="o">]()</span>
+
+<span class="n">ab</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="n">ab</span> <span class="o">+=</span> <span class="o">(</span><span class="mi">2</span><span class="o">,</span><span class="mi">3</span><span class="o">,</span><span class="mi">4</span><span class="o">,</span><span class="mi">5</span><span class="o">)</span>
+
+<span class="n">ab</span> <span class="o">++=</span> <span class="nc">Array</span><span class="o">(</span><span class="mi">6</span><span class="o">,</span><span class="mi">7</span><span class="o">)</span>
+
+<span class="n">println</span><span class="o">(</span><span class="n">ab</span><span class="o">)</span>
+
+<span class="n">ab</span><span class="o">.</span><span class="n">trimEnd</span><span class="o">(</span><span class="mi">2</span><span class="o">)</span> <span class="c1">//移除最后2个元素
+</span>
+<span class="n">println</span><span class="o">(</span><span class="n">ab</span><span class="o">)</span>
+
+<span class="n">ab</span><span class="o">.</span><span class="n">trimStart</span><span class="o">(</span><span class="mi">1</span><span class="o">)</span> <span class="c1">//移除头部1个元素
+</span>
+<span class="n">println</span><span class="o">(</span><span class="n">ab</span><span class="o">)</span>
+
+<span class="n">ab</span><span class="o">.</span><span class="n">insert</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span><span class="mi">1</span><span class="o">)</span><span class="c1">//在下标0之前插入
+</span>
+<span class="n">println</span><span class="o">(</span><span class="n">ab</span><span class="o">)</span>
+
+<span class="n">ab</span><span class="o">.</span><span class="n">insert</span><span class="o">(</span><span class="n">ab</span><span class="o">.</span><span class="n">length</span><span class="o">,</span><span class="mi">6</span><span class="o">,</span><span class="mi">7</span><span class="o">,</span><span class="mi">8</span><span class="o">)</span> <span class="c1">//在最后插入任意多的元素
+</span>
+<span class="n">println</span><span class="o">(</span><span class="n">ab</span><span class="o">)</span>
+
+<span class="n">ab</span><span class="o">.</span><span class="n">remove</span><span class="o">(</span><span class="n">ab</span><span class="o">.</span><span class="n">length</span> <span class="o">-</span> <span class="mi">1</span><span class="o">)</span> <span class="c1">//移除最后个元素
+</span>
+<span class="n">println</span><span class="o">(</span><span class="n">ab</span><span class="o">)</span>
+
+<span class="n">ab</span><span class="o">.</span><span class="n">remove</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span><span class="mi">2</span><span class="o">)</span> <span class="c1">//在下标2的位置移除2个元素
+</span>
+<span class="n">println</span><span class="o">(</span><span class="n">ab</span><span class="o">)</span>
+
+
+
+<span class="k">val</span> <span class="n">newArray</span> <span class="k">=</span> <span class="n">ab</span><span class="o">.</span><span class="n">toArray</span> <span class="c1">//ArrayBuffer转Array
+</span>
+<span class="n">newArray</span><span class="o">.</span><span class="n">foreach</span><span class="o">(</span><span class="n">println</span><span class="o">)</span>
+
+<span class="k">val</span> <span class="n">newBuffer</span> <span class="k">=</span> <span class="n">newArray</span><span class="o">.</span><span class="n">toBuffer</span> <span class="c1">//Array转ArrayBuffer
+</span>
+<span class="n">println</span><span class="o">(</span><span class="n">newBuffer</span><span class="o">)</span>
+
+</code></pre>
+</div>
+
+<ul>
+  <li>数组循环</li>
+</ul>
+
+<div class="language-scala highlighter-rouge"><pre class="highlight"><code>
+<span class="k">for</span> <span class="o">(</span><span class="n">i</span> <span class="k">&lt;-</span> <span class="mi">0</span> <span class="n">until</span> <span class="n">newArray</span><span class="o">.</span><span class="n">length</span><span class="o">)</span> <span class="c1">//可以用newArray.indices
+</span>
+    <span class="n">println</span><span class="o">(</span><span class="n">i</span> <span class="o">+</span> <span class="s">":"</span> <span class="o">+</span> <span class="n">newArray</span><span class="o">(</span><span class="n">i</span><span class="o">))</span>
+
+<span class="n">println</span><span class="o">(</span><span class="s">"--------"</span><span class="o">)</span>
+
+<span class="k">for</span> <span class="o">(</span><span class="n">i</span> <span class="k">&lt;-</span> <span class="mi">0</span> <span class="n">until</span> <span class="o">(</span><span class="n">newArray</span><span class="o">.</span><span class="n">length</span><span class="o">,</span><span class="mi">2</span><span class="o">))</span> <span class="c1">//每2个元素一跳
+</span>
+    <span class="n">println</span><span class="o">(</span><span class="n">i</span> <span class="o">+</span> <span class="s">":"</span> <span class="o">+</span> <span class="n">newArray</span><span class="o">(</span><span class="n">i</span><span class="o">))</span>
+
+<span class="n">println</span><span class="o">(</span><span class="s">"--------"</span><span class="o">)</span>
+
+<span class="k">for</span> <span class="o">(</span><span class="n">i</span> <span class="k">&lt;-</span> <span class="mi">0</span> <span class="n">until</span> <span class="n">newArray</span><span class="o">.</span><span class="n">length</span> <span class="n">reverse</span><span class="o">)</span> <span class="c1">//从数组的尾端开始遍历
+</span>
+    <span class="n">println</span><span class="o">(</span><span class="n">i</span> <span class="o">+</span> <span class="s">":"</span> <span class="o">+</span> <span class="n">newArray</span><span class="o">(</span><span class="n">i</span><span class="o">))</span>
+
+<span class="n">println</span><span class="o">(</span><span class="s">"--------"</span><span class="o">)</span>
+
+ <span class="k">for</span> <span class="o">(</span><span class="n">element</span> <span class="k">&lt;-</span> <span class="n">newArray</span><span class="o">)</span> <span class="c1">//不需要用下标,可以直接访问元素,和java的"增强"for循环相似
+</span>
+    <span class="n">println</span><span class="o">(</span><span class="n">element</span><span class="o">)</span>
+
+</code></pre>
+</div>
+
+<ul>
+  <li>数组转换</li>
+</ul>
+
+<div class="language-scala highlighter-rouge"><pre class="highlight"><code>
+<span class="k">val</span> <span class="n">a</span> <span class="k">=</span> <span class="nc">ArrayBuffer</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span><span class="mi">2</span><span class="o">,</span><span class="mi">3</span><span class="o">,</span><span class="mi">4</span><span class="o">,</span><span class="mi">5</span><span class="o">,</span><span class="mi">6</span><span class="o">)</span>
+
+<span class="k">val</span> <span class="n">result</span> <span class="k">=</span> <span class="k">for</span> <span class="o">(</span><span class="n">i</span> <span class="k">&lt;-</span> <span class="n">a</span><span class="o">)</span> <span class="k">yield</span> <span class="n">i</span> <span class="o">*</span> <span class="mi">2</span> <span class="c1">//产生新的ArrayBuffer,不会修改原有ArrayBuffer
+</span>
+<span class="n">println</span><span class="o">(</span><span class="n">a</span><span class="o">)</span>
+
+<span class="n">println</span><span class="o">(</span><span class="n">result</span><span class="o">)</span>
+
+
+
+<span class="k">val</span> <span class="n">result2</span> <span class="k">=</span> <span class="k">for</span><span class="o">(</span><span class="n">i</span> <span class="k">&lt;-</span> <span class="n">a</span> <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="k">yield</span> <span class="n">i</span> <span class="o">*</span> <span class="mi">2</span> <span class="c1">//守卫,for中的if条件,对偶数翻倍
+</span>
+<span class="n">println</span><span class="o">(</span><span class="n">result2</span><span class="o">)</span>
+
+<span class="k">val</span> <span class="n">result3</span> <span class="k">=</span> <span class="n">a</span><span class="o">.</span><span class="n">filter</span><span class="o">(</span><span class="k">_</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="o">).</span><span class="n">map</span><span class="o">(</span><span class="k">_</span><span class="o">*</span><span class="mi">2</span><span class="o">)</span> <span class="c1">//另一种风格,函数风格
+</span>
+<span class="n">println</span><span class="o">(</span><span class="n">result3</span><span class="o">)</span>
+
+</code></pre>
+</div>
+
+<ul>
+  <li>常用算法</li>
+</ul>
+
+<div class="language-scala highlighter-rouge"><pre class="highlight"><code>
+<span class="k">val</span> <span class="n">aa</span> <span class="k">=</span> <span class="nc">Array</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span><span class="mi">2</span><span class="o">,</span><span class="mi">1</span><span class="o">)</span>
+
+<span class="n">println</span><span class="o">(</span><span class="n">aa</span><span class="o">.</span><span class="n">sum</span><span class="o">)</span> <span class="c1">//6
+</span>
+<span class="n">println</span><span class="o">(</span><span class="n">aa</span><span class="o">.</span><span class="n">min</span><span class="o">)</span> <span class="c1">//1
+</span>
+<span class="n">println</span><span class="o">(</span><span class="n">aa</span><span class="o">.</span><span class="n">max</span><span class="o">)</span> <span class="c1">//3
+</span>
+<span class="k">val</span> <span class="n">sort</span><span class="k">:</span> <span class="kt">Any</span> <span class="o">=</span> <span class="n">scala</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="nc">Sorting</span><span class="o">.</span><span class="n">quickSort</span><span class="o">(</span><span class="n">aa</span><span class="o">)</span> <span class="c1">//可以直接对数组排序,但不能对数组缓冲排序
+</span>
+
+
+<span class="k">val</span> <span class="n">as</span> <span class="k">=</span> <span class="nc">Array</span><span class="o">(</span><span class="s">"array"</span><span class="o">,</span><span class="s">"hello"</span><span class="o">,</span><span class="s">"little"</span><span class="o">)</span>
+
+<span class="n">println</span><span class="o">(</span><span class="n">as</span><span class="o">.</span><span class="n">max</span><span class="o">)</span> <span class="c1">//little
+</span>
+
+
+<span class="k">val</span> <span class="n">saa</span> <span class="k">=</span> <span class="n">aa</span><span class="o">.</span><span class="n">sorted</span> <span class="c1">//不会修改原始的版本
+</span>
+<span class="n">println</span><span class="o">(</span><span class="n">saa</span><span class="o">.</span><span class="n">mkString</span><span class="o">(</span><span class="s">"|"</span><span class="o">))</span> <span class="c1">//1|2|3
+</span>
+
+
+<span class="k">val</span> <span class="n">sw</span> <span class="k">=</span> <span class="n">aa</span><span class="o">.</span><span class="n">sortWith</span><span class="o">(</span><span class="k">_</span> <span class="o">&gt;</span> <span class="k">_</span><span class="o">)</span> <span class="c1">//提供一个比较函数
+</span>
+<span class="n">println</span><span class="o">(</span><span class="n">sw</span><span class="o">.</span><span class="n">mkString</span><span class="o">(</span><span class="s">"&lt;"</span><span class="o">,</span><span class="s">","</span><span class="o">,</span><span class="s">"&gt;"</span><span class="o">))</span> <span class="c1">// &lt;3,2,1&gt;
+</span>
+</code></pre>
+</div>
+
+<ul>
+  <li>
+    <p>要使用sum方法，元素类型必须是数值类型，要么是整型，要么是浮点数或者BigInteger/BigDecimal</p>
+  </li>
+  <li>
+    <p>min和max输出数组或数组缓冲中最小和最大的元素</p>
+  </li>
+  <li>
+    <p>sorted方法将数组或数组缓冲排序并返回经过排序的数组或数组缓冲，这个过程不会修改原始版本</p>
+  </li>
+  <li>
+    <p>还可以提供一个比较函数，不过要使用sortWith方法</p>
+  </li>
+  <li>
+    <p>对于min、max和quickSort方法，元素类型必须支持比较操作，包括了数字，字符串以及其他带有Ordered特质的类型</p>
+  </li>
+  <li>
+    <p>想要显示数组或数组缓冲的内容，可以用mkString方法，允许指定元素之间的分隔符。还有个重载版本可以指定前缀和后缀</p>
+  </li>
+  <li>
+    <p>对数组Array的操作方法都会被转换成ArrayOps对象</p>
+  </li>
+  <li>
+    <p>多维数组使用Array.ofDim()方法</p>
+  </li>
+</ul>
+
+<div class="language-scala highlighter-rouge"><pre class="highlight"><code>
+<span class="k">val</span> <span class="n">matrix</span> <span class="k">=</span> <span class="nc">Array</span><span class="o">.</span><span class="n">ofDim</span><span class="o">[</span><span class="kt">Int</span><span class="o">](</span><span class="mi">2</span><span class="o">,</span><span class="mi">3</span><span class="o">)</span> <span class="c1">//2行 3列
+</span>
+<span class="c1">//Array[Array[Int]] = Array(Array(0, 0, 0), Array(0, 0, 0))
+</span>
+<span class="n">matrix</span><span class="o">(</span><span class="mi">0</span><span class="o">)(</span><span class="mi">0</span><span class="o">)</span> <span class="k">=</span> <span class="mi">1</span> <span class="c1">//第1行 第1列=1 Array(Array(1, 0, 0), Array(0, 0, 0))
+</span>
+<span class="n">matrix</span><span class="o">(</span><span class="mi">1</span><span class="o">)(</span><span class="mi">0</span><span class="o">)</span> <span class="k">=</span> <span class="mi">4</span> <span class="c1">//第2行 第1列=4 Array(Array(1, 0, 0), Array(4, 0, 0))
+</span>
+<span class="n">println</span><span class="o">(</span><span class="n">matrix</span><span class="o">(</span><span class="mi">0</span><span class="o">).</span><span class="n">mkString</span><span class="o">(</span><span class="s">"-"</span><span class="o">))</span> <span class="c1">//1-0-0
+</span>
+<span class="n">println</span><span class="o">(</span><span class="n">matrix</span><span class="o">(</span><span class="mi">1</span><span class="o">).</span><span class="n">mkString</span><span class="o">(</span><span class="s">"-"</span><span class="o">))</span> <span class="c1">//4-0-0
+</span>
+</code></pre>
+</div>
+
+<ul>
+  <li>与java的互相操作</li>
+</ul>
+
+<div class="language-scala highlighter-rouge"><pre class="highlight"><code>
+<span class="k">import</span> <span class="nn">scala.collection.JavaConversions.bufferAsJavaList</span> <span class="c1">//buffer转javaList
+</span>
+<span class="k">import</span> <span class="nn">scala.collection.mutable.ArrayBuffer</span>
+
+<span class="k">val</span> <span class="n">command</span> <span class="k">=</span> <span class="nc">ArrayBuffer</span><span class="o">(</span><span class="s">"ls"</span><span class="o">,</span><span class="s">"-all"</span><span class="o">,</span><span class="s">"/"</span><span class="o">)</span>
+
+<span class="cm">/* 构建java原生的List
+
+val list = new java.util.ArrayList[String]()
+
+list.add("jps")
+
+*/</span>
+
+ <span class="k">val</span> <span class="n">pb</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">ProcessBuilder</span><span class="o">(</span><span class="n">command</span><span class="o">)</span> <span class="c1">//入参是List[String],ArrayBuffer被隐式转换成java的List
+</span>
+<span class="k">val</span> <span class="n">process</span> <span class="k">=</span> <span class="n">pb</span><span class="o">.</span><span class="n">start</span><span class="o">()</span>
+
+<span class="k">val</span> <span class="n">stream</span> <span class="k">=</span> <span class="nc">Source</span><span class="o">.</span><span class="n">fromInputStream</span><span class="o">(</span><span class="n">process</span><span class="o">.</span><span class="n">getInputStream</span><span class="o">,</span><span class="s">"UTF-8"</span><span class="o">)</span>
+
+<span class="n">println</span><span class="o">(</span><span class="n">stream</span><span class="o">.</span><span class="n">mkString</span><span class="o">)</span>
+
+
+
+<span class="k">import</span> <span class="nn">scala.collection.JavaConversions.asScalaBuffer</span> <span class="c1">//返回List,自动转换成一个Buffer,注意不是ArrayBuffer
+</span>
+<span class="k">import</span> <span class="nn">scala.collection.mutable.Buffer</span>
+
+<span class="k">val</span> <span class="n">buffer</span><span class="k">:</span> <span class="kt">Buffer</span><span class="o">[</span><span class="kt">String</span><span class="o">]</span> <span class="k">=</span> <span class="n">pb</span><span class="o">.</span><span class="n">command</span><span class="o">()</span> <span class="c1">//return List[String] =&gt; Buffer[String]
+</span>
+<span class="n">println</span><span class="o">(</span><span class="n">buffer</span><span class="o">.</span><span class="n">mkString</span><span class="o">)</span>
+
+</code></pre>
+</div>
+
+<ul>
+  <li>
+    <p>java的ProcessBuilder类有一个构造器，入参是List<String>。当然在代码中可以直接使用java的ArrayList来实现，就像上述代码传入注释掉的list变量。其实完全可以引入scala的隐式转换方法，scala.collection.JavaConversions.bufferAsJavaList，这样可以在代码中使用scala的数组缓冲，在调用java方法时，自动的包装成java列表</String></p>
+  </li>
+  <li>
+    <p>反过来是一样的，pb.command()返回List<String>。可以引入JavaConversions.asScalaBuffer，List<String>将自动转换为Buffer[String]，注意并不是ArrayBuffer</String></String></p>
+  </li>
+</ul>
+
+<p>原创文章转载请注明出处：<a href="http://9leg.com/scala/2016/03/13/scala-for-the-impatient-04.html">快学scala笔记——数组相关操作</a></p>
+
+</article>
+	
+<p class="lotus-anno">Disclaimer: This article is based on  <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="nofollow" target="_blank" title="表示-非営利-継承">BY-NC-SA</a> license. Reproduced please specify switched from: <a href="" title="" rel="nofollow">whisper</a></p>
+    
+<section class="lotus-nextpage fn-clear">
+    
+    <div class="lotus-nextpage-left"><a class="prev" href="/scala/2016/03/06/scala-for-the-impatient-03.html" rel="prev">&laquo;&nbsp;快学scala笔记——控制结构和函数下篇</a></div>
+    
+    
+    <div class="lotus-nextpage-right"><a class="next" href="/scala/2016/03/19/scala-for-the-impatient-05.html" rel="next">快学scala笔记——映射和元组&nbsp;&raquo;</a></div>
+    
+</section>
+
+
+<footer class="lotus-footer">
+	<p>Copyright © 2011–2016 whisper All rights reserved. Design by <a href="http://www.zhanxin.info" target="_blank">zhanxin</a>.</p>
+</footer>
+<script src="http://localhost:4000/static/js/jquery.scrollTo.js" type="text/javascript"></script>
+<script src="http://localhost:4000/static/js/iLotus.js" type="text/javascript"></script>
+</body>
+</html>

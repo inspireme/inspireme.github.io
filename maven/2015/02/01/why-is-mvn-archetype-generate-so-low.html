@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html id="J-html" class="">
+<head>
+    <meta charset="UTF-8" />
+    <title>
+        
+            用maven骨架生成项目速度慢的问题
+        
+    </title>
+    <meta name="generator" content="Jekyll" />
+    <meta name="author" content="whisper" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="all" href="http://localhost:4000/static/style.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="http://localhost:4000/static/syntax.css" />
+    <!--[if lt IE 9]>
+    <script src="http://localhost:4000/static/js/html5.js" type="text/javascript"></script>
+    <![endif]-->
+    <script src="http://localhost:4000/static/js/jquery.js" type="text/javascript"></script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" class="home blog lotus index">
+    <nav class="lotus-nav">
+        <ul>
+            
+            
+            
+            
+            
+            <li class="home ">
+                <a href="/index.html" rel="bookmark" title="Home">
+                    <i class="icon-home"></i>
+                </a>
+                
+            </li>
+            
+            
+            
+            
+            
+            <li class="">
+                <a href="/categories.html" rel="bookmark" title="Categories">
+                    <i class="icon-list-alt"></i>
+                </a>
+                
+            </li>
+            
+            
+            
+            
+            
+            <li class="">
+                <a href="/archives.html" rel="bookmark" title="Archives">
+                    <i class="icon-reorder"></i>
+                </a>
+                
+            </li>
+            
+            
+            
+            
+            
+            <li class="">
+                <a href="/about.html" rel="bookmark" title="About Me">
+                    <i class="icon-user"></i>
+                </a>
+                
+            </li>
+            
+            
+            
+            
+            
+            <li class="">
+                <a href="mailto:cndone@gmail.com" rel="bookmark" title="Contact Me">
+                    <i class="icon-envelope-alt"></i>
+                </a>
+                
+            </li>
+            
+            
+            
+            
+            
+            <li class="">
+                <a href="https://github.com/inspireme" rel="bookmark" title="Github">
+                    <i class="icon-github"></i>
+                </a>
+                
+            </li>
+            
+        </ul>
+    </nav>
+
+    <p class="lotus-breadcrub">
+    <a href="http://localhost:4000/index.html" rel="nofollow" rel="nofollow" title="ホームページ">Home</a>
+    <span> &gt; </span>
+    <a href="http://localhost:4000/archives.html" rel="nofollow" >Archives</a>
+    <span> &gt; </span>
+    用maven骨架生成项目速度慢的问题
+</p>
+<h1 class="lotus-pagetit">用maven骨架生成项目速度慢的问题</h1>
+
+<p class="lotus-meta">Publish: <time class="date" pubdate="February  1, 2015">February  1, 2015</time></p>
+
+<article  itemscope itemtype="http://schema.org/Article" class="lotus-post lotus-post-columns-1">
+<p>最近从IntelliJ Idea 14的Community版本切换到Ultimate。</p>
+
+<h3 id="section">问题出现</h3>
+<p>最近从IntelliJ Idea 14的Community版本切换到Ultimate,key是从网络上下载的。安装之后，在创建maven project时(使用了archetype)，速度慢的令人不敢相信，从Idea的控制台可以看到信息停留在：</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="o">[</span><span class="n">INFO</span><span class="o">]</span> <span class="o">&lt;&lt;&lt;</span> <span class="n">maven</span><span class="o">-</span><span class="n">archetype</span><span class="o">-</span><span class="nl">plugin:</span><span class="mf">2.2</span><span class="o">:</span><span class="n">generate</span> <span class="o">(</span><span class="k">default</span><span class="o">-</span><span class="n">cli</span><span class="o">)</span> <span class="o">&lt;</span> <span class="n">generate</span><span class="o">-</span><span class="n">sources</span>
+<span class="err">@</span> <span class="n">standalone</span><span class="o">-</span><span class="n">pom</span> <span class="o">&lt;&lt;&lt;</span>
+<span class="o">[</span><span class="n">INFO</span><span class="o">]</span>
+<span class="o">[</span><span class="n">INFO</span><span class="o">]</span> <span class="o">---</span> <span class="n">maven</span><span class="o">-</span><span class="n">archetype</span><span class="o">-</span><span class="nl">plugin:</span><span class="mf">2.2</span><span class="o">:</span><span class="n">generate</span> <span class="o">(</span><span class="k">default</span><span class="o">-</span><span class="n">cli</span><span class="o">)</span> <span class="err">@</span> <span class="n">standalone</span><span class="o">-</span><span class="n">pom</span> <span class="o">--</span>
+<span class="o">-</span>
+<span class="o">[</span><span class="n">INFO</span><span class="o">]</span> <span class="n">Generating</span> <span class="n">project</span> <span class="n">in</span> <span class="n">Batch</span> <span class="n">mode</span></code></pre></figure>
+
+<p>重试了很多次，都在<strong><em>Generating project in Batch mode</em></strong>等待，但Idea的状态栏显示还在不停的运行，并没有卡死，大约30分钟之后，才完成项目的创建。</p>
+
+<h3 id="section-1">问题分析</h3>
+<p>为什么会等怎么久呢？我先用mvn原生的命令试了一次，</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">mvn</span> <span class="nl">archetype:</span><span class="n">generate</span> <span class="o">-</span><span class="n">DgroupId</span><span class="o">=</span><span class="n">com</span><span class="o">.</span><span class="mi">9</span><span class="n">leg</span><span class="o">.</span><span class="na">app</span> <span class="o">-</span><span class="n">DartifactId</span><span class="o">=</span><span class="n">my</span><span class="o">-</span><span class="n">app</span> <span class="o">-</span><span class="n">DarchetypeArtifactId</span><span class="o">=</span><span class="n">maven</span><span class="o">-</span><span class="n">archetype</span><span class="o">-</span><span class="n">quickstart</span> <span class="o">-</span><span class="n">DinteractiveMode</span><span class="o">=</span><span class="kc">false</span></code></pre></figure>
+
+<p>还是在<strong><em>Generating project in Batch mode</em></strong>等了很久，但排除了Idea的问题。接着加上 <strong><em>-X</em></strong> 命令，用于显示debugInfo.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">mvn</span> <span class="o">-</span><span class="n">X</span> <span class="nl">archetype:</span><span class="n">generate</span> <span class="o">-</span><span class="n">DgroupId</span><span class="o">=</span><span class="n">com</span><span class="o">.</span><span class="mi">9</span><span class="n">leg</span><span class="o">.</span><span class="na">app</span> <span class="o">-</span><span class="n">DartifactId</span><span class="o">=</span><span class="n">my</span><span class="o">-</span><span class="n">app</span> <span class="o">-</span><span class="n">DarchetypeArtifactId</span><span class="o">=</span><span class="n">maven</span><span class="o">-</span><span class="n">archetype</span><span class="o">-</span><span class="n">quickstart</span> <span class="o">-</span><span class="n">DinteractiveMode</span><span class="o">=</span><span class="kc">false</span></code></pre></figure>
+
+<p>输出信息如下：</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="o">[</span><span class="n">INFO</span><span class="o">]</span> <span class="n">Generating</span> <span class="n">project</span> <span class="n">in</span> <span class="n">Batch</span> <span class="n">mode</span>
+<span class="o">[</span><span class="n">DEBUG</span><span class="o">]</span> <span class="n">Searching</span> <span class="k">for</span> <span class="n">remote</span> <span class="nl">catalog:</span> <span class="nl">http:</span><span class="c1">//repo1.maven.org/maven2/archetype-catalog.xml</span></code></pre></figure>
+
+<p>看来是请求网络上的catalog.xml文件，才导致速度很慢。直接复制了url用浏览器打开，速度也是超级慢，等了很久才打开。
+看来问题就是出现在这里。</p>
+
+<h3 id="section-2">问题解决</h3>
+<ol>
+  <li>直接下载archetype-catalog.xml文件，放到本地的apache-maven目录中。</li>
+  <li>在使用mvn archetype:generate命令时，加上-DarchetypeCatalog=local,以替换网络上的catalog.xml。</li>
+</ol>
+
+<h3 id="section-3">题外话</h3>
+<p>我切换到eclipse，生成maven项目并且选用了骨架archetype，没有任何问题。在eclipse中可以设置maven的archetype catalog，不管是本地的，还是远程的catalog，都可以设置。
+切换到Idea中，找了半天，搜索了半天，似乎没有这个设置。只是可以在创建项目时，单独的设置自定义的archetype，而不能设置整个archetype列表。有谁知道请告知，谢谢。</p>
+
+<p>参考:<a href="http://jira.codehaus.org/browse/ARCHETYPE-202" target="_blank">ARCHETYPE-202</a></p>
+
+<p>原创文章转载请注明出处: <a href="http://9leg.com/maven/2015/02/01/why-is-mvn-archetype-generate-so-low.html">用mvn骨架生成项目速度慢的问题</a></p>
+
+</article>
+	
+<p class="lotus-anno">Disclaimer: This article is based on  <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="nofollow" target="_blank" title="表示-非営利-継承">BY-NC-SA</a> license. Reproduced please specify switched from: <a href="" title="" rel="nofollow">whisper</a></p>
+    
+<section class="lotus-nextpage fn-clear">
+    
+    <div class="lotus-nextpage-left"><a class="prev" href="/java/2015/01/20/ascii-art-java-example.html" rel="prev">&laquo;&nbsp;用Java生成ASCII艺术字</a></div>
+    
+    
+    <div class="lotus-nextpage-right"><a class="next" href="/spring/2015/02/12/spring-propertysource-value-annotations-example.html" rel="next">Spring的@PropertySource和@Value注解例子&nbsp;&raquo;</a></div>
+    
+</section>
+
+
+<footer class="lotus-footer">
+	<p>Copyright © 2011–2016 whisper All rights reserved. Design by <a href="http://www.zhanxin.info" target="_blank">zhanxin</a>.</p>
+</footer>
+<script src="http://localhost:4000/static/js/jquery.scrollTo.js" type="text/javascript"></script>
+<script src="http://localhost:4000/static/js/iLotus.js" type="text/javascript"></script>
+</body>
+</html>

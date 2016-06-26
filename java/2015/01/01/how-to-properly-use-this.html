@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html id="J-html" class="">
+<head>
+    <meta charset="UTF-8" />
+    <title>
+        
+            this的由来和正确的使用方式
+        
+    </title>
+    <meta name="generator" content="Jekyll" />
+    <meta name="author" content="whisper" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="all" href="http://localhost:4000/static/style.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="http://localhost:4000/static/syntax.css" />
+    <!--[if lt IE 9]>
+    <script src="http://localhost:4000/static/js/html5.js" type="text/javascript"></script>
+    <![endif]-->
+    <script src="http://localhost:4000/static/js/jquery.js" type="text/javascript"></script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" class="home blog lotus index">
+    <nav class="lotus-nav">
+        <ul>
+            
+            
+            
+            
+            
+            <li class="home ">
+                <a href="/index.html" rel="bookmark" title="Home">
+                    <i class="icon-home"></i>
+                </a>
+                
+            </li>
+            
+            
+            
+            
+            
+            <li class="">
+                <a href="/categories.html" rel="bookmark" title="Categories">
+                    <i class="icon-list-alt"></i>
+                </a>
+                
+            </li>
+            
+            
+            
+            
+            
+            <li class="">
+                <a href="/archives.html" rel="bookmark" title="Archives">
+                    <i class="icon-reorder"></i>
+                </a>
+                
+            </li>
+            
+            
+            
+            
+            
+            <li class="">
+                <a href="/about.html" rel="bookmark" title="About Me">
+                    <i class="icon-user"></i>
+                </a>
+                
+            </li>
+            
+            
+            
+            
+            
+            <li class="">
+                <a href="mailto:cndone@gmail.com" rel="bookmark" title="Contact Me">
+                    <i class="icon-envelope-alt"></i>
+                </a>
+                
+            </li>
+            
+            
+            
+            
+            
+            <li class="">
+                <a href="https://github.com/inspireme" rel="bookmark" title="Github">
+                    <i class="icon-github"></i>
+                </a>
+                
+            </li>
+            
+        </ul>
+    </nav>
+
+    <p class="lotus-breadcrub">
+    <a href="http://localhost:4000/index.html" rel="nofollow" rel="nofollow" title="ホームページ">Home</a>
+    <span> &gt; </span>
+    <a href="http://localhost:4000/archives.html" rel="nofollow" >Archives</a>
+    <span> &gt; </span>
+    this的由来和正确的使用方式
+</p>
+<h1 class="lotus-pagetit">this的由来和正确的使用方式</h1>
+
+<p class="lotus-meta">Publish: <time class="date" pubdate="January  1, 2015">January  1, 2015</time></p>
+
+<article  itemscope itemtype="http://schema.org/Article" class="lotus-post lotus-post-columns-1">
+<p>this关键字在java中，通常都是指“这个对象”或者“当前对象”的含义，它本身表示对当前对象的引用。</p>
+
+<h3 id="this">this的由来</h3>
+
+<p>那为什么会有这个关键字呢？</p>
+
+<p>来看下Think in Java中对this的描述，如果有同一类型的两个对象，分别是a和b。你可能想知道，如何才能让过这两个对象都能调用peel()方法呢：</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span>
+	<span class="kt">void</span> <span class="nf">peel</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">)</span> <span class="o">{</span> <span class="o">}</span>
+<span class="o">}</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">FooPeel</span> <span class="o">{</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span> <span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+		<span class="n">Foo</span> <span class="n">a</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Foo</span><span class="o">(),</span>
+			<span class="n">b</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Foo</span><span class="o">();</span>
+		<span class="n">f1</span><span class="o">.</span><span class="na">peel</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span>
+		<span class="n">f2</span><span class="o">.</span><span class="na">peel</span><span class="o">(</span><span class="mi">2</span><span class="o">);</span>
+	<span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>如果只有一个peel方法，它如何知道是被a还是b所调用的呢？
+为了能用简便、面向对象的语法来编写代码——既“发送消息给对象”，编译器做了一些幕后工作。它暗自把“所操纵对象的引用”作为第一个参数传递给peel()。所以上述两个方法的调用就变成了这样：</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Foo</span><span class="o">.</span><span class="na">peel</span><span class="o">(</span><span class="n">a</span><span class="o">,</span><span class="mi">1</span><span class="o">);</span>
+<span class="n">Foo</span><span class="o">.</span><span class="na">peel</span><span class="o">(</span><span class="n">b</span><span class="o">,</span><span class="mi">2</span><span class="o">);</span></code></pre></figure>
+
+<p>这是内部的表示形式。当然我们肯定不能这样写代码，也不会编译通过，这样写就是帮助大家了解实际所发生的事情。
+那么问题来了，如果你希望在方法的内部获得对当前对象的引用，该如何获得这个引用呢？由于这个引用是由编译器“偷偷”传入的，是没有标识符可用。所以，为此有个专门的关键字，是的，它就是this。this关键字只能在方法内部使用，表示对“调用方法的那个对象”的引用。</p>
+
+<h3 id="this-1">this的正确使用方式</h3>
+<p>首先，我们来看下面两段代码：</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">Apple</span> <span class="o">{</span>
+    <span class="kt">void</span> <span class="nf">getApple</span><span class="o">(){</span>
+    <span class="o">}</span>
+    <span class="kt">void</span> <span class="nf">getBigApple</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">getApple</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">Apple</span> <span class="o">{</span>
+    <span class="kt">void</span> <span class="nf">getApple</span><span class="o">(){</span>
+    <span class="o">}</span>
+    <span class="kt">void</span> <span class="nf">getBigApple</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">getApple</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>上面两段代码都演示了在方法内部调用同一个类的另一个方法，这两者写法没有对错。但是<strong>没有加this调用才是最优的</strong>。有些人喜欢在每一个方法调用和字段引用前，认为这样“更清楚更明确”。其实不然，使用高级语言的原因之一就是它们能帮我们做一些事情，在这里编译器能帮我们自动添加。
+只有当需要明确指出对当前对象的引用时，才需要使用this关键字。例如，返回对当前对象的引用时，就常常在return语句里这样写：</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Apple</span> <span class="o">{</span>
+	<span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+	<span class="n">Apple</span> <span class="nf">incr</span><span class="o">()</span> <span class="o">{</span>
+		<span class="n">i</span><span class="o">++;</span>
+		<span class="k">return</span> <span class="k">this</span><span class="o">;</span>
+	<span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>要是你把this放在一些没必要的地方，会使读你代码的人不知所错，因为别人写的代码不会到处使用this，只在必要处使用this。</p>
+
+<p>可能为一个类写了多个构造器，有时可能想在一个构造器中调用另一个构造器，以避免重复代码。可用this做到这一点。
+在构造器中，如果为this添加了参数列表，那么就有了不同的含义。这将产生对符合此参数列表的某个构造器的明确调用。</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Apple</span> <span class="o">{</span>
+	<span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+	<span class="n">String</span> <span class="n">s</span> <span class="o">=</span> <span class="s">"initial value"</span><span class="o">;</span>
+	<span class="n">Apple</span><span class="o">(</span><span class="kt">int</span> <span class="n">value</span><span class="o">)</span> <span class="o">{</span>
+		<span class="n">count</span> <span class="o">=</span> <span class="n">value</span><span class="o">;</span>
+	<span class="o">}</span>
+	<span class="n">Apple</span><span class="o">(</span><span class="n">String</span> <span class="n">ss</span><span class="o">)</span> <span class="o">{</span>
+		<span class="n">s</span> <span class="o">=</span> <span class="n">ss</span><span class="o">;</span>
+	<span class="o">}</span>
+	<span class="n">Apple</span><span class="o">(</span><span class="n">String</span> <span class="n">s</span><span class="o">,</span><span class="kt">int</span> <span class="n">value</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">this</span><span class="o">(</span><span class="n">value</span><span class="o">);</span>
+		<span class="c1">//this(s); can't call two</span>
+		<span class="k">this</span><span class="o">.</span><span class="na">s</span> <span class="o">=</span> <span class="n">s</span><span class="o">;</span> 
+	<span class="o">}</span>
+	<span class="n">Apple</span> <span class="o">()</span> <span class="o">{</span>
+		<span class="k">this</span><span class="o">(</span><span class="s">"9leg"</span><span class="o">,</span><span class="mi">88</span><span class="o">);</span>
+	<span class="o">}</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span> <span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+		<span class="n">Apple</span> <span class="n">apple</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Apple</span><span class="o">();</span>
+	<span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>上面的代码很简单，构造器<em>Apple(String s,int value)</em>表明，尽管可以用this调用一个构造器，但却不能调用两个。此外，必须将构造器调用置于最起始处，否则编译器会报错。
+这里还展示了this的另一种用法。由于参数s的名称和数据成员s的名字相同，会产生歧义，使用<em>this.s</em>来代表数据成员就能解决。</p>
+
+<p>原创文章转载请注明出处：<a href="http://www.9leg.com/java/2015/01/01/how-to-properly-use-this.html">this的由来和正确的使用方式</a></p>
+
+</article>
+	
+<p class="lotus-anno">Disclaimer: This article is based on  <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="nofollow" target="_blank" title="表示-非営利-継承">BY-NC-SA</a> license. Reproduced please specify switched from: <a href="" title="" rel="nofollow">whisper</a></p>
+    
+<section class="lotus-nextpage fn-clear">
+    
+    <div class="lotus-nextpage-left"><a class="prev" href="/java/2014/12/30/static-biding-and-dynamic-binding-in-java.html" rel="prev">&laquo;&nbsp;Java中的静态绑定和动态绑定</a></div>
+    
+    
+    <div class="lotus-nextpage-right"><a class="next" href="/java/2015/01/04/constructor-init.html" rel="next">Java构造器和枚举的初始化&nbsp;&raquo;</a></div>
+    
+</section>
+
+
+<footer class="lotus-footer">
+	<p>Copyright © 2011–2016 whisper All rights reserved. Design by <a href="http://www.zhanxin.info" target="_blank">zhanxin</a>.</p>
+</footer>
+<script src="http://localhost:4000/static/js/jquery.scrollTo.js" type="text/javascript"></script>
+<script src="http://localhost:4000/static/js/iLotus.js" type="text/javascript"></script>
+</body>
+</html>

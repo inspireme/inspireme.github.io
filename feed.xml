@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel>
+        <title>whisper</title>
+        <description>whisperのworkspace</description>
+        <link>http://localhost:4000</link>
+        <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+        
+            <item>
+                <title>快学scala笔记——映射和元组</title>
+                
+                    <dc:creator>whisper</dc:creator>
+                
+                
+                    <description>&lt;ul&gt;
+  &lt;li&gt;映射是键/值对偶的集合。&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+                
+                <pubDate>Sat, 19 Mar 2016 15:30:22 +0000</pubDate>
+                <link>http://localhost:4000/scala/2016/03/19/scala-for-the-impatient-05.html</link>
+                <guid isPermaLink="true">http://localhost:4000/scala/2016/03/19/scala-for-the-impatient-05.html</guid>
+            </item>
+        
+            <item>
+                <title>快学scala笔记——数组相关操作</title>
+                
+                    <dc:creator>whisper</dc:creator>
+                
+                
+                    <description>&lt;ul&gt;
+  &lt;li&gt;长度不变的数组&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+                
+                <pubDate>Sun, 13 Mar 2016 20:01:22 +0000</pubDate>
+                <link>http://localhost:4000/scala/2016/03/13/scala-for-the-impatient-04.html</link>
+                <guid isPermaLink="true">http://localhost:4000/scala/2016/03/13/scala-for-the-impatient-04.html</guid>
+            </item>
+        
+            <item>
+                <title>快学scala笔记——控制结构和函数下篇</title>
+                
+                    <dc:creator>whisper</dc:creator>
+                
+                
+                    <description>&lt;ul&gt;
+  &lt;li&gt;scala有java相同的while和do循环。&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+                
+                <pubDate>Sun, 06 Mar 2016 13:52:35 +0000</pubDate>
+                <link>http://localhost:4000/scala/2016/03/06/scala-for-the-impatient-03.html</link>
+                <guid isPermaLink="true">http://localhost:4000/scala/2016/03/06/scala-for-the-impatient-03.html</guid>
+            </item>
+        
+            <item>
+                <title>快学scala笔记——控制结构和函数上篇</title>
+                
+                    <dc:creator>whisper</dc:creator>
+                
+                
+                    <description>&lt;ul&gt;
+  &lt;li&gt;在scala中，几乎所有构造出来的语法结构都有值。&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+                
+                <pubDate>Sun, 21 Feb 2016 18:52:35 +0000</pubDate>
+                <link>http://localhost:4000/scala/2016/02/21/scala-for-the-impatient-02.html</link>
+                <guid isPermaLink="true">http://localhost:4000/scala/2016/02/21/scala-for-the-impatient-02.html</guid>
+            </item>
+        
+            <item>
+                <title>快学scala笔记——基础</title>
+                
+                    <dc:creator>whisper</dc:creator>
+                
+                
+                    <description>&lt;p&gt;去年,就开始断断续续看scala了,选择了快学scala这本书,当然最全面的肯定是Programming In Scala这本,但觉得不合适入门,可以用于后期提高.&lt;/p&gt;
+
+</description>
+                
+                <pubDate>Fri, 19 Feb 2016 22:20:35 +0000</pubDate>
+                <link>http://localhost:4000/scala/2016/02/19/scala-for-the-impatient-01.html</link>
+                <guid isPermaLink="true">http://localhost:4000/scala/2016/02/19/scala-for-the-impatient-01.html</guid>
+            </item>
+        
+            <item>
+                <title>Java注解全面解析</title>
+                
+                    <dc:creator>whisper</dc:creator>
+                
+                
+                    <description>&lt;p&gt;注解解析,包含基本语法,注解元素,快捷方式和JDK1.8注解增强的说明&lt;/p&gt;
+
+</description>
+                
+                <pubDate>Thu, 21 Jan 2016 17:03:35 +0000</pubDate>
+                <link>http://localhost:4000/java/2016/01/21/java-annotation.html</link>
+                <guid isPermaLink="true">http://localhost:4000/java/2016/01/21/java-annotation.html</guid>
+            </item>
+        
+            <item>
+                <title>maven的java版本随jenv切换改变而改变</title>
+                
+                    <dc:creator>whisper</dc:creator>
+                
+                
+                    <description>&lt;p&gt;在项目中使用的还是java1.7比较多,1.8平时业余项目用用,学习下,毕竟新版本始终会代替旧版本的.在mac上推荐使用jenv工具来管理多java版本,
+能够随意切换.&lt;/p&gt;
+
+</description>
+                
+                <pubDate>Thu, 05 Nov 2015 21:20:35 +0000</pubDate>
+                <link>http://localhost:4000/maven/2015/11/05/maven-java-version.html</link>
+                <guid isPermaLink="true">http://localhost:4000/maven/2015/11/05/maven-java-version.html</guid>
+            </item>
+        
+            <item>
+                <title>基于play-scala的sbt目录和ivy仓库设置</title>
+                
+                    <dc:creator>whisper</dc:creator>
+                
+                
+                    <description>&lt;p&gt;花了一下午时间，总算全部搞定。时间主要都花费在下载jar包上，虽然开了VPN还是下载慢，没有VPN的话，真心要奔溃的。这期间有太多坑了，所以写这篇文章，
+一是记录下，二是方便大家查阅。&lt;/p&gt;
+
+</description>
+                
+                <pubDate>Sat, 17 Oct 2015 20:16:15 +0000</pubDate>
+                <link>http://localhost:4000/scala/2015/10/17/scala-play-setting.html</link>
+                <guid isPermaLink="true">http://localhost:4000/scala/2015/10/17/scala-play-setting.html</guid>
+            </item>
+        
+            <item>
+                <title>大型网站之分布式会话管理</title>
+                
+                    <dc:creator>whisper</dc:creator>
+                
+                
+                    <description>&lt;p&gt;随着网站的功能和用户越来越多，单机器服务部署的Web应用已经不能再支持了。这时候就需要优化或调整目前的架构，具体怎么优化，或先优化哪部分，这取决于网站的具体情况，
+并非总是一个套路。&lt;/p&gt;
+
+</description>
+                
+                <pubDate>Thu, 01 Oct 2015 20:27:15 +0000</pubDate>
+                <link>http://localhost:4000/design/2015/10/01/distributed-session.html</link>
+                <guid isPermaLink="true">http://localhost:4000/design/2015/10/01/distributed-session.html</guid>
+            </item>
+        
+            <item>
+                <title>SharedPreference.Editor中commit和apply区别</title>
+                
+                    <dc:creator>whisper</dc:creator>
+                
+                
+                    <description>&lt;p&gt;学Android也有段时间了,至今还没写过文章,可能是我懒吧(其实就是懒- -),今天在练习项目的时候，被IDEA一个warning弄懵了,看下图:&lt;/p&gt;
+
+</description>
+                
+                <pubDate>Sun, 12 Jul 2015 18:53:30 +0000</pubDate>
+                <link>http://localhost:4000/android/2015/07/12/whats-the-difference-between-commit-and-apply-in-shared-preference.html</link>
+                <guid isPermaLink="true">http://localhost:4000/android/2015/07/12/whats-the-difference-between-commit-and-apply-in-shared-preference.html</guid>
+            </item>
+        
+            <item>
+                <title>Maven引入本地jar包并生成jar包运行修改MANIFEST.MF文件</title>
+                
+                    <dc:creator>whisper</dc:creator>
+                
+                
+                    <description>&lt;p&gt;由于项目需要发送短信的功能，确定了产品后，开始开发，发现第三方提供的jar没有maven坐标。于是就开启了一系列的坑爹之路，最后还是解决了，纪录下。&lt;/p&gt;
+
+</description>
+                
+                <pubDate>Mon, 29 Jun 2015 16:23:56 +0000</pubDate>
+                <link>http://localhost:4000/maven/2015/06/29/maven-import-local-jar-and-packing-jar.html</link>
+                <guid isPermaLink="true">http://localhost:4000/maven/2015/06/29/maven-import-local-jar-and-packing-jar.html</guid>
+            </item>
+        
+            <item>
+                <title>String中的无意识递归</title>
+                
+                    <dc:creator>whisper</dc:creator>
+                
+                
+                    <description>&lt;p&gt;我们知道在Java在所有类的父类是Object,容器自然也不例外。因此容器都有toString()方法，并且覆写了该方法，使容器生成的String结果能够表达容器自身，以及容器所有包含的对象。例如ArrayList的toString()方法，它会遍历ArrayList中包含的所有对象，调用每个对象的toString()方法。&lt;/p&gt;
+
+</description>
+                
+                <pubDate>Thu, 07 May 2015 11:06:56 +0000</pubDate>
+                <link>http://localhost:4000/java/2015/05/07/string-recursive.html</link>
+                <guid isPermaLink="true">http://localhost:4000/java/2015/05/07/string-recursive.html</guid>
+            </item>
+        
+            <item>
+                <title>Spring注解@Primary</title>
+                
+                    <dc:creator>whisper</dc:creator>
+                
+                
+                    <description>&lt;p&gt;假定，有如下两个类，OperaSinger and MetalSinger。&lt;/p&gt;
+
+</description>
+                
+                <pubDate>Tue, 05 May 2015 16:05:39 +0000</pubDate>
+                <link>http://localhost:4000/spring/2015/05/05/spring-annotation-primary.html</link>
+                <guid isPermaLink="true">http://localhost:4000/spring/2015/05/05/spring-annotation-primary.html</guid>
+            </item>
+        
+            <item>
+                <title>Spring的@PropertySource和@Value注解例子</title>
+                
+                    <dc:creator>whisper</dc:creator>
+                
+                
+                    <description>&lt;p&gt;在这篇文章中，我们会利用Spring的&lt;strong&gt;@PropertySource&lt;/strong&gt;和&lt;strong&gt;@Value&lt;/strong&gt;两个注解从配置文件properties中读取值，以及如何从配置文件中的值转换为List对象。&lt;/p&gt;
+
+</description>
+                
+                <pubDate>Thu, 12 Feb 2015 15:21:52 +0000</pubDate>
+                <link>http://localhost:4000/spring/2015/02/12/spring-propertysource-value-annotations-example.html</link>
+                <guid isPermaLink="true">http://localhost:4000/spring/2015/02/12/spring-propertysource-value-annotations-example.html</guid>
+            </item>
+        
+            <item>
+                <title>用maven骨架生成项目速度慢的问题</title>
+                
+                    <dc:creator>whisper</dc:creator>
+                
+                
+                    <description>&lt;p&gt;最近从IntelliJ Idea 14的Community版本切换到Ultimate。&lt;/p&gt;
+
+</description>
+                
+                <pubDate>Sun, 01 Feb 2015 15:15:40 +0000</pubDate>
+                <link>http://localhost:4000/maven/2015/02/01/why-is-mvn-archetype-generate-so-low.html</link>
+                <guid isPermaLink="true">http://localhost:4000/maven/2015/02/01/why-is-mvn-archetype-generate-so-low.html</guid>
+            </item>
+        
+            <item>
+                <title>用Java生成ASCII艺术字</title>
+                
+                    <dc:creator>whisper</dc:creator>
+                
+                
+                    <description>&lt;p&gt;这是一个有趣的java列子，先来看下效果吧：&lt;/p&gt;
+
+</description>
+                
+                <pubDate>Tue, 20 Jan 2015 16:37:54 +0000</pubDate>
+                <link>http://localhost:4000/java/2015/01/20/ascii-art-java-example.html</link>
+                <guid isPermaLink="true">http://localhost:4000/java/2015/01/20/ascii-art-java-example.html</guid>
+            </item>
+        
+            <item>
+                <title>优化Jekyll博客访问慢的问题</title>
+                
+                    <dc:creator>whisper</dc:creator>
+                
+                
+                    <description>&lt;p&gt;博客运行一个多月了，各方面都很满意。唯独国内访问网站速度很慢。&lt;/p&gt;
+
+</description>
+                
+                <pubDate>Thu, 15 Jan 2015 12:32:10 +0000</pubDate>
+                <link>http://localhost:4000/other/2015/01/15/optimization-of-jekyll-blog-access-slow-problem.html</link>
+                <guid isPermaLink="true">http://localhost:4000/other/2015/01/15/optimization-of-jekyll-blog-access-slow-problem.html</guid>
+            </item>
+        
+            <item>
+                <title>初始化Jekyll的markdown文件</title>
+                
+                    <dc:creator>whisper</dc:creator>
+                
+                
+                    <description>&lt;p&gt;自从用了Jekyll，每次写文章前，在正文开始处都要加入一段描述（&lt;a href=&quot;http://jekyllrb.com/docs/frontmatter/&quot; target=&quot;_blank&quot;&gt;FrontMatter&lt;/a&gt;）。下面就是这篇文章的FrontMatter。&lt;/p&gt;
+
+</description>
+                
+                <pubDate>Sun, 11 Jan 2015 15:17:32 +0000</pubDate>
+                <link>http://localhost:4000/other/2015/01/11/create-jekyll-markdown-by-java.html</link>
+                <guid isPermaLink="true">http://localhost:4000/other/2015/01/11/create-jekyll-markdown-by-java.html</guid>
+            </item>
+        
+            <item>
+                <title>Java字符串转枚举类型</title>
+                
+                    <dc:creator>whisper</dc:creator>
+                
+                
+                    <description>&lt;p&gt;如下代码有个枚举类，怎样才能将字符串“arin”转成WhoisRIR.ARIN枚举类呢？&lt;/p&gt;
+
+</description>
+                
+                <pubDate>Fri, 09 Jan 2015 22:34:00 +0000</pubDate>
+                <link>http://localhost:4000/java/2015/01/09/java-convert-string-to-enum-object.html</link>
+                <guid isPermaLink="true">http://localhost:4000/java/2015/01/09/java-convert-string-to-enum-object.html</guid>
+            </item>
+        
+            <item>
+                <title>Java的final关键字</title>
+                
+                    <dc:creator>whisper</dc:creator>
+                
+                
+                    <description>&lt;p&gt;编程语言都有某种方法，来向编译器告知一块数据是恒定不变的。有时数据的恒定不变是很有用的，比如：&lt;/p&gt;
+
+</description>
+                
+                <pubDate>Wed, 07 Jan 2015 20:57:00 +0000</pubDate>
+                <link>http://localhost:4000/java/2015/01/07/final-keyword.html</link>
+                <guid isPermaLink="true">http://localhost:4000/java/2015/01/07/final-keyword.html</guid>
+            </item>
+        
+            <item>
+                <title>Java构造器和枚举的初始化</title>
+                
+                    <dc:creator>whisper</dc:creator>
+                
+                
+                    <description>&lt;p&gt;最近读完了ThinkInJava的第5章初始化与清理，在这里做下简单的总结，以加深影响。&lt;/p&gt;
+
+</description>
+                
+                <pubDate>Sun, 04 Jan 2015 21:28:30 +0000</pubDate>
+                <link>http://localhost:4000/java/2015/01/04/constructor-init.html</link>
+                <guid isPermaLink="true">http://localhost:4000/java/2015/01/04/constructor-init.html</guid>
+            </item>
+        
+            <item>
+                <title>this的由来和正确的使用方式</title>
+                
+                    <dc:creator>whisper</dc:creator>
+                
+                
+                    <description>&lt;p&gt;this关键字在java中，通常都是指“这个对象”或者“当前对象”的含义，它本身表示对当前对象的引用。&lt;/p&gt;
+
+</description>
+                
+                <pubDate>Thu, 01 Jan 2015 22:27:30 +0000</pubDate>
+                <link>http://localhost:4000/java/2015/01/01/how-to-properly-use-this.html</link>
+                <guid isPermaLink="true">http://localhost:4000/java/2015/01/01/how-to-properly-use-this.html</guid>
+            </item>
+        
+            <item>
+                <title>Java中的静态绑定和动态绑定</title>
+                
+                    <dc:creator>whisper</dc:creator>
+                
+                
+                    <description>&lt;p&gt;一个Java程序的执行要经过编译和执行（解释）这两个步骤，同时Java又是面向对象的编程语言。当子类和父类存在同一个方法，子类重写了父类的方法，程序在运行时调用方法是调用父类的方法还是子类的重写方法呢，这应该是我们在初学Java时遇到的问题。这里首先我们将确定这种调用何种方法实现或者变量的操作叫做绑定。&lt;/p&gt;
+
+</description>
+                
+                <pubDate>Tue, 30 Dec 2014 12:55:11 +0000</pubDate>
+                <link>http://localhost:4000/java/2014/12/30/static-biding-and-dynamic-binding-in-java.html</link>
+                <guid isPermaLink="true">http://localhost:4000/java/2014/12/30/static-biding-and-dynamic-binding-in-java.html</guid>
+            </item>
+        
+            <item>
+                <title>中文网页重设与排版：TYPO.CSS</title>
+                
+                    <dc:creator>whisper</dc:creator>
+                
+                
+                    <description>&lt;p&gt;中文网页重设与排版：TYPO.CSS&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt; 
+&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ol&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;table&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;#section1&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;关于&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;TYPO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;CSS&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;#section2&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;排版实例&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ul&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;#section2-1&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;例&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;：论语学而篇第一&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;#section2-2&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;例&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;：英文排版&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ul&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;#section3&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;附录&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ol&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;#appendix1&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TYPO&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;CSS&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;排版偏重点&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;#appendix2&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;开源许可&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ol&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ol&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+</description>
+                
+                <pubDate>Sat, 04 Jan 2014 00:00:00 +0000</pubDate>
+                <link>http://localhost:4000/ilotus/2014/01/04/iLotus.html</link>
+                <guid isPermaLink="true">http://localhost:4000/ilotus/2014/01/04/iLotus.html</guid>
+            </item>
+        
+            <item>
+                <title>markdown 语法学习</title>
+                
+                    <dc:creator>whisper</dc:creator>
+                
+                
+                    <description>&lt;p&gt;###h 标题的写法
+        #h1
+        ##h2
+        ######h6
+### ul 和 li
+* testtest
+* testtest
+* testtest
+* testtest
+* testtest
+        * testtest
+        * testtest
+        * testtest
+        * testtest
+        * testtest
+1. testtest
+2. testtest
+3. testtest
+4. testtest
+5. testtest
+        1. testtest
+        2. testtest
+        3. testtest
+        4. testtest
+        5. testtest&lt;/p&gt;
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;格式&lt;/th&gt;
+      &lt;th&gt;用法&lt;/th&gt;
+      &lt;th&gt;示例&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;h1标签&amp;lt;/hd&amp;gt;
+      &lt;td&gt;    #标签&lt;/td&gt;
+      &lt;td&gt;#我是h1
+          =========
+          ## h2
+      &lt;/td&gt;
+    &amp;lt;/tr&amp;gt;
+    &lt;tr&gt;
+      &lt;td&gt;ul标签&amp;lt;/hd&amp;gt;
+      &lt;td&gt;    * 标签&lt;/td&gt;
+      &lt;td&gt;  &lt;/td&gt;
+    &amp;lt;/tr&amp;gt;
+  &amp;lt;/tbody&amp;gt;
+Markdown 使用 email 形式的區塊引言
+果你很熟悉如何在 email 信件中引言i
+你就知
+道怎麼在 Markdown 文件中建立一個區塊引言，那會看起來像是你強迫斷行，然後在每行的
+最前面加
+&amp;lt;/table&amp;gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+</description>
+                
+                <pubDate>Fri, 02 Dec 2011 00:00:00 +0000</pubDate>
+                <link>http://localhost:4000/ilotus/2011/12/02/markdown-roll.html</link>
+                <guid isPermaLink="true">http://localhost:4000/ilotus/2011/12/02/markdown-roll.html</guid>
+            </item>
+        
+    </channel>
+</rss>
