@@ -3,8 +3,8 @@
     <channel>
         <title>whisper</title>
         <description>whisperのworkspace</description>
-        <link>http://localhost:4000</link>
-        <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+        <link>https://inspireme.github.io</link>
+        <atom:link href="https://inspireme.github.io/feed.xml" rel="self" type="application/rss+xml" />
         
             <item>
                 <title>快学scala笔记——映射和元组</title>
@@ -19,8 +19,8 @@
 </description>
                 
                 <pubDate>Sat, 19 Mar 2016 15:30:22 +0000</pubDate>
-                <link>http://localhost:4000/scala/2016/03/19/scala-for-the-impatient-05.html</link>
-                <guid isPermaLink="true">http://localhost:4000/scala/2016/03/19/scala-for-the-impatient-05.html</guid>
+                <link>https://inspireme.github.io/scala/2016/03/19/scala-for-the-impatient-05.html</link>
+                <guid isPermaLink="true">https://inspireme.github.io/scala/2016/03/19/scala-for-the-impatient-05.html</guid>
             </item>
         
             <item>
@@ -36,8 +36,8 @@
 </description>
                 
                 <pubDate>Sun, 13 Mar 2016 20:01:22 +0000</pubDate>
-                <link>http://localhost:4000/scala/2016/03/13/scala-for-the-impatient-04.html</link>
-                <guid isPermaLink="true">http://localhost:4000/scala/2016/03/13/scala-for-the-impatient-04.html</guid>
+                <link>https://inspireme.github.io/scala/2016/03/13/scala-for-the-impatient-04.html</link>
+                <guid isPermaLink="true">https://inspireme.github.io/scala/2016/03/13/scala-for-the-impatient-04.html</guid>
             </item>
         
             <item>
@@ -53,8 +53,8 @@
 </description>
                 
                 <pubDate>Sun, 06 Mar 2016 13:52:35 +0000</pubDate>
-                <link>http://localhost:4000/scala/2016/03/06/scala-for-the-impatient-03.html</link>
-                <guid isPermaLink="true">http://localhost:4000/scala/2016/03/06/scala-for-the-impatient-03.html</guid>
+                <link>https://inspireme.github.io/scala/2016/03/06/scala-for-the-impatient-03.html</link>
+                <guid isPermaLink="true">https://inspireme.github.io/scala/2016/03/06/scala-for-the-impatient-03.html</guid>
             </item>
         
             <item>
@@ -70,8 +70,8 @@
 </description>
                 
                 <pubDate>Sun, 21 Feb 2016 18:52:35 +0000</pubDate>
-                <link>http://localhost:4000/scala/2016/02/21/scala-for-the-impatient-02.html</link>
-                <guid isPermaLink="true">http://localhost:4000/scala/2016/02/21/scala-for-the-impatient-02.html</guid>
+                <link>https://inspireme.github.io/scala/2016/02/21/scala-for-the-impatient-02.html</link>
+                <guid isPermaLink="true">https://inspireme.github.io/scala/2016/02/21/scala-for-the-impatient-02.html</guid>
             </item>
         
             <item>
@@ -85,8 +85,8 @@
 </description>
                 
                 <pubDate>Fri, 19 Feb 2016 22:20:35 +0000</pubDate>
-                <link>http://localhost:4000/scala/2016/02/19/scala-for-the-impatient-01.html</link>
-                <guid isPermaLink="true">http://localhost:4000/scala/2016/02/19/scala-for-the-impatient-01.html</guid>
+                <link>https://inspireme.github.io/scala/2016/02/19/scala-for-the-impatient-01.html</link>
+                <guid isPermaLink="true">https://inspireme.github.io/scala/2016/02/19/scala-for-the-impatient-01.html</guid>
             </item>
         
             <item>
@@ -100,8 +100,8 @@
 </description>
                 
                 <pubDate>Thu, 21 Jan 2016 17:03:35 +0000</pubDate>
-                <link>http://localhost:4000/java/2016/01/21/java-annotation.html</link>
-                <guid isPermaLink="true">http://localhost:4000/java/2016/01/21/java-annotation.html</guid>
+                <link>https://inspireme.github.io/java/2016/01/21/java-annotation.html</link>
+                <guid isPermaLink="true">https://inspireme.github.io/java/2016/01/21/java-annotation.html</guid>
             </item>
         
             <item>
@@ -116,8 +116,8 @@
 </description>
                 
                 <pubDate>Thu, 05 Nov 2015 21:20:35 +0000</pubDate>
-                <link>http://localhost:4000/maven/2015/11/05/maven-java-version.html</link>
-                <guid isPermaLink="true">http://localhost:4000/maven/2015/11/05/maven-java-version.html</guid>
+                <link>https://inspireme.github.io/maven/2015/11/05/maven-java-version.html</link>
+                <guid isPermaLink="true">https://inspireme.github.io/maven/2015/11/05/maven-java-version.html</guid>
             </item>
         
             <item>
@@ -132,8 +132,8 @@
 </description>
                 
                 <pubDate>Sat, 17 Oct 2015 20:16:15 +0000</pubDate>
-                <link>http://localhost:4000/scala/2015/10/17/scala-play-setting.html</link>
-                <guid isPermaLink="true">http://localhost:4000/scala/2015/10/17/scala-play-setting.html</guid>
+                <link>https://inspireme.github.io/scala/2015/10/17/scala-play-setting.html</link>
+                <guid isPermaLink="true">https://inspireme.github.io/scala/2015/10/17/scala-play-setting.html</guid>
             </item>
         
             <item>
@@ -148,8 +148,8 @@
 </description>
                 
                 <pubDate>Thu, 01 Oct 2015 20:27:15 +0000</pubDate>
-                <link>http://localhost:4000/design/2015/10/01/distributed-session.html</link>
-                <guid isPermaLink="true">http://localhost:4000/design/2015/10/01/distributed-session.html</guid>
+                <link>https://inspireme.github.io/design/2015/10/01/distributed-session.html</link>
+                <guid isPermaLink="true">https://inspireme.github.io/design/2015/10/01/distributed-session.html</guid>
             </item>
         
             <item>
@@ -163,8 +163,8 @@
 </description>
                 
                 <pubDate>Sun, 12 Jul 2015 18:53:30 +0000</pubDate>
-                <link>http://localhost:4000/android/2015/07/12/whats-the-difference-between-commit-and-apply-in-shared-preference.html</link>
-                <guid isPermaLink="true">http://localhost:4000/android/2015/07/12/whats-the-difference-between-commit-and-apply-in-shared-preference.html</guid>
+                <link>https://inspireme.github.io/android/2015/07/12/whats-the-difference-between-commit-and-apply-in-shared-preference.html</link>
+                <guid isPermaLink="true">https://inspireme.github.io/android/2015/07/12/whats-the-difference-between-commit-and-apply-in-shared-preference.html</guid>
             </item>
         
             <item>
@@ -178,8 +178,8 @@
 </description>
                 
                 <pubDate>Mon, 29 Jun 2015 16:23:56 +0000</pubDate>
-                <link>http://localhost:4000/maven/2015/06/29/maven-import-local-jar-and-packing-jar.html</link>
-                <guid isPermaLink="true">http://localhost:4000/maven/2015/06/29/maven-import-local-jar-and-packing-jar.html</guid>
+                <link>https://inspireme.github.io/maven/2015/06/29/maven-import-local-jar-and-packing-jar.html</link>
+                <guid isPermaLink="true">https://inspireme.github.io/maven/2015/06/29/maven-import-local-jar-and-packing-jar.html</guid>
             </item>
         
             <item>
@@ -193,8 +193,8 @@
 </description>
                 
                 <pubDate>Thu, 07 May 2015 11:06:56 +0000</pubDate>
-                <link>http://localhost:4000/java/2015/05/07/string-recursive.html</link>
-                <guid isPermaLink="true">http://localhost:4000/java/2015/05/07/string-recursive.html</guid>
+                <link>https://inspireme.github.io/java/2015/05/07/string-recursive.html</link>
+                <guid isPermaLink="true">https://inspireme.github.io/java/2015/05/07/string-recursive.html</guid>
             </item>
         
             <item>
@@ -208,8 +208,8 @@
 </description>
                 
                 <pubDate>Tue, 05 May 2015 16:05:39 +0000</pubDate>
-                <link>http://localhost:4000/spring/2015/05/05/spring-annotation-primary.html</link>
-                <guid isPermaLink="true">http://localhost:4000/spring/2015/05/05/spring-annotation-primary.html</guid>
+                <link>https://inspireme.github.io/spring/2015/05/05/spring-annotation-primary.html</link>
+                <guid isPermaLink="true">https://inspireme.github.io/spring/2015/05/05/spring-annotation-primary.html</guid>
             </item>
         
             <item>
@@ -223,8 +223,8 @@
 </description>
                 
                 <pubDate>Thu, 12 Feb 2015 15:21:52 +0000</pubDate>
-                <link>http://localhost:4000/spring/2015/02/12/spring-propertysource-value-annotations-example.html</link>
-                <guid isPermaLink="true">http://localhost:4000/spring/2015/02/12/spring-propertysource-value-annotations-example.html</guid>
+                <link>https://inspireme.github.io/spring/2015/02/12/spring-propertysource-value-annotations-example.html</link>
+                <guid isPermaLink="true">https://inspireme.github.io/spring/2015/02/12/spring-propertysource-value-annotations-example.html</guid>
             </item>
         
             <item>
@@ -238,8 +238,8 @@
 </description>
                 
                 <pubDate>Sun, 01 Feb 2015 15:15:40 +0000</pubDate>
-                <link>http://localhost:4000/maven/2015/02/01/why-is-mvn-archetype-generate-so-low.html</link>
-                <guid isPermaLink="true">http://localhost:4000/maven/2015/02/01/why-is-mvn-archetype-generate-so-low.html</guid>
+                <link>https://inspireme.github.io/maven/2015/02/01/why-is-mvn-archetype-generate-so-low.html</link>
+                <guid isPermaLink="true">https://inspireme.github.io/maven/2015/02/01/why-is-mvn-archetype-generate-so-low.html</guid>
             </item>
         
             <item>
@@ -253,8 +253,8 @@
 </description>
                 
                 <pubDate>Tue, 20 Jan 2015 16:37:54 +0000</pubDate>
-                <link>http://localhost:4000/java/2015/01/20/ascii-art-java-example.html</link>
-                <guid isPermaLink="true">http://localhost:4000/java/2015/01/20/ascii-art-java-example.html</guid>
+                <link>https://inspireme.github.io/java/2015/01/20/ascii-art-java-example.html</link>
+                <guid isPermaLink="true">https://inspireme.github.io/java/2015/01/20/ascii-art-java-example.html</guid>
             </item>
         
             <item>
@@ -268,8 +268,8 @@
 </description>
                 
                 <pubDate>Thu, 15 Jan 2015 12:32:10 +0000</pubDate>
-                <link>http://localhost:4000/other/2015/01/15/optimization-of-jekyll-blog-access-slow-problem.html</link>
-                <guid isPermaLink="true">http://localhost:4000/other/2015/01/15/optimization-of-jekyll-blog-access-slow-problem.html</guid>
+                <link>https://inspireme.github.io/other/2015/01/15/optimization-of-jekyll-blog-access-slow-problem.html</link>
+                <guid isPermaLink="true">https://inspireme.github.io/other/2015/01/15/optimization-of-jekyll-blog-access-slow-problem.html</guid>
             </item>
         
             <item>
@@ -283,8 +283,8 @@
 </description>
                 
                 <pubDate>Sun, 11 Jan 2015 15:17:32 +0000</pubDate>
-                <link>http://localhost:4000/other/2015/01/11/create-jekyll-markdown-by-java.html</link>
-                <guid isPermaLink="true">http://localhost:4000/other/2015/01/11/create-jekyll-markdown-by-java.html</guid>
+                <link>https://inspireme.github.io/other/2015/01/11/create-jekyll-markdown-by-java.html</link>
+                <guid isPermaLink="true">https://inspireme.github.io/other/2015/01/11/create-jekyll-markdown-by-java.html</guid>
             </item>
         
             <item>
@@ -298,8 +298,8 @@
 </description>
                 
                 <pubDate>Fri, 09 Jan 2015 22:34:00 +0000</pubDate>
-                <link>http://localhost:4000/java/2015/01/09/java-convert-string-to-enum-object.html</link>
-                <guid isPermaLink="true">http://localhost:4000/java/2015/01/09/java-convert-string-to-enum-object.html</guid>
+                <link>https://inspireme.github.io/java/2015/01/09/java-convert-string-to-enum-object.html</link>
+                <guid isPermaLink="true">https://inspireme.github.io/java/2015/01/09/java-convert-string-to-enum-object.html</guid>
             </item>
         
             <item>
@@ -313,8 +313,8 @@
 </description>
                 
                 <pubDate>Wed, 07 Jan 2015 20:57:00 +0000</pubDate>
-                <link>http://localhost:4000/java/2015/01/07/final-keyword.html</link>
-                <guid isPermaLink="true">http://localhost:4000/java/2015/01/07/final-keyword.html</guid>
+                <link>https://inspireme.github.io/java/2015/01/07/final-keyword.html</link>
+                <guid isPermaLink="true">https://inspireme.github.io/java/2015/01/07/final-keyword.html</guid>
             </item>
         
             <item>
@@ -328,8 +328,8 @@
 </description>
                 
                 <pubDate>Sun, 04 Jan 2015 21:28:30 +0000</pubDate>
-                <link>http://localhost:4000/java/2015/01/04/constructor-init.html</link>
-                <guid isPermaLink="true">http://localhost:4000/java/2015/01/04/constructor-init.html</guid>
+                <link>https://inspireme.github.io/java/2015/01/04/constructor-init.html</link>
+                <guid isPermaLink="true">https://inspireme.github.io/java/2015/01/04/constructor-init.html</guid>
             </item>
         
             <item>
@@ -343,8 +343,8 @@
 </description>
                 
                 <pubDate>Thu, 01 Jan 2015 22:27:30 +0000</pubDate>
-                <link>http://localhost:4000/java/2015/01/01/how-to-properly-use-this.html</link>
-                <guid isPermaLink="true">http://localhost:4000/java/2015/01/01/how-to-properly-use-this.html</guid>
+                <link>https://inspireme.github.io/java/2015/01/01/how-to-properly-use-this.html</link>
+                <guid isPermaLink="true">https://inspireme.github.io/java/2015/01/01/how-to-properly-use-this.html</guid>
             </item>
         
             <item>
@@ -358,8 +358,8 @@
 </description>
                 
                 <pubDate>Tue, 30 Dec 2014 12:55:11 +0000</pubDate>
-                <link>http://localhost:4000/java/2014/12/30/static-biding-and-dynamic-binding-in-java.html</link>
-                <guid isPermaLink="true">http://localhost:4000/java/2014/12/30/static-biding-and-dynamic-binding-in-java.html</guid>
+                <link>https://inspireme.github.io/java/2014/12/30/static-biding-and-dynamic-binding-in-java.html</link>
+                <guid isPermaLink="true">https://inspireme.github.io/java/2014/12/30/static-biding-and-dynamic-binding-in-java.html</guid>
             </item>
         
             <item>
@@ -390,8 +390,8 @@
 </description>
                 
                 <pubDate>Sat, 04 Jan 2014 00:00:00 +0000</pubDate>
-                <link>http://localhost:4000/ilotus/2014/01/04/iLotus.html</link>
-                <guid isPermaLink="true">http://localhost:4000/ilotus/2014/01/04/iLotus.html</guid>
+                <link>https://inspireme.github.io/ilotus/2014/01/04/iLotus.html</link>
+                <guid isPermaLink="true">https://inspireme.github.io/ilotus/2014/01/04/iLotus.html</guid>
             </item>
         
             <item>
@@ -458,8 +458,8 @@ Markdown 使用 email 形式的區塊引言
 </description>
                 
                 <pubDate>Fri, 02 Dec 2011 00:00:00 +0000</pubDate>
-                <link>http://localhost:4000/ilotus/2011/12/02/markdown-roll.html</link>
-                <guid isPermaLink="true">http://localhost:4000/ilotus/2011/12/02/markdown-roll.html</guid>
+                <link>https://inspireme.github.io/ilotus/2011/12/02/markdown-roll.html</link>
+                <guid isPermaLink="true">https://inspireme.github.io/ilotus/2011/12/02/markdown-roll.html</guid>
             </item>
         
     </channel>
