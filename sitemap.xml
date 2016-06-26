@@ -3,7 +3,7 @@
 
   <!--  Homepage -->
   <url>
-    <loc>http://localhost:4000/</loc>
+    <loc>https://inspireme.github.io/</loc>
     <lastmod>2016-06-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -11,175 +11,175 @@
 
   
   <url>
-    <loc>http://localhost:4000/scala/2016/03/19/scala-for-the-impatient-05.html</loc>
+    <loc>https://inspireme.github.io/scala/2016/03/19/scala-for-the-impatient-05.html</loc>
     
     <lastmod>2016-03-19</lastmod>
     
   </url>
   
   <url>
-    <loc>http://localhost:4000/scala/2016/03/13/scala-for-the-impatient-04.html</loc>
+    <loc>https://inspireme.github.io/scala/2016/03/13/scala-for-the-impatient-04.html</loc>
     
     <lastmod>2016-03-13</lastmod>
     
   </url>
   
   <url>
-    <loc>http://localhost:4000/scala/2016/03/06/scala-for-the-impatient-03.html</loc>
+    <loc>https://inspireme.github.io/scala/2016/03/06/scala-for-the-impatient-03.html</loc>
     
     <lastmod>2016-03-06</lastmod>
     
   </url>
   
   <url>
-    <loc>http://localhost:4000/scala/2016/02/21/scala-for-the-impatient-02.html</loc>
+    <loc>https://inspireme.github.io/scala/2016/02/21/scala-for-the-impatient-02.html</loc>
     
     <lastmod>2016-02-21</lastmod>
     
   </url>
   
   <url>
-    <loc>http://localhost:4000/scala/2016/02/19/scala-for-the-impatient-01.html</loc>
+    <loc>https://inspireme.github.io/scala/2016/02/19/scala-for-the-impatient-01.html</loc>
     
     <lastmod>2016-02-19</lastmod>
     
   </url>
   
   <url>
-    <loc>http://localhost:4000/java/2016/01/21/java-annotation.html</loc>
+    <loc>https://inspireme.github.io/java/2016/01/21/java-annotation.html</loc>
     
     <lastmod>2016-01-21</lastmod>
     
   </url>
   
   <url>
-    <loc>http://localhost:4000/maven/2015/11/05/maven-java-version.html</loc>
+    <loc>https://inspireme.github.io/maven/2015/11/05/maven-java-version.html</loc>
     
     <lastmod>2015-11-05</lastmod>
     
   </url>
   
   <url>
-    <loc>http://localhost:4000/scala/2015/10/17/scala-play-setting.html</loc>
+    <loc>https://inspireme.github.io/scala/2015/10/17/scala-play-setting.html</loc>
     
     <lastmod>2015-10-17</lastmod>
     
   </url>
   
   <url>
-    <loc>http://localhost:4000/design/2015/10/01/distributed-session.html</loc>
+    <loc>https://inspireme.github.io/design/2015/10/01/distributed-session.html</loc>
     
     <lastmod>2015-10-01</lastmod>
     
   </url>
   
   <url>
-    <loc>http://localhost:4000/android/2015/07/12/whats-the-difference-between-commit-and-apply-in-shared-preference.html</loc>
+    <loc>https://inspireme.github.io/android/2015/07/12/whats-the-difference-between-commit-and-apply-in-shared-preference.html</loc>
     
     <lastmod>2015-07-12</lastmod>
     
   </url>
   
   <url>
-    <loc>http://localhost:4000/maven/2015/06/29/maven-import-local-jar-and-packing-jar.html</loc>
+    <loc>https://inspireme.github.io/maven/2015/06/29/maven-import-local-jar-and-packing-jar.html</loc>
     
     <lastmod>2015-06-29</lastmod>
     
   </url>
   
   <url>
-    <loc>http://localhost:4000/java/2015/05/07/string-recursive.html</loc>
+    <loc>https://inspireme.github.io/java/2015/05/07/string-recursive.html</loc>
     
     <lastmod>2015-05-07</lastmod>
     
   </url>
   
   <url>
-    <loc>http://localhost:4000/spring/2015/05/05/spring-annotation-primary.html</loc>
+    <loc>https://inspireme.github.io/spring/2015/05/05/spring-annotation-primary.html</loc>
     
     <lastmod>2015-05-05</lastmod>
     
   </url>
   
   <url>
-    <loc>http://localhost:4000/spring/2015/02/12/spring-propertysource-value-annotations-example.html</loc>
+    <loc>https://inspireme.github.io/spring/2015/02/12/spring-propertysource-value-annotations-example.html</loc>
     
     <lastmod>2015-02-12</lastmod>
     
   </url>
   
   <url>
-    <loc>http://localhost:4000/maven/2015/02/01/why-is-mvn-archetype-generate-so-low.html</loc>
+    <loc>https://inspireme.github.io/maven/2015/02/01/why-is-mvn-archetype-generate-so-low.html</loc>
     
     <lastmod>2015-02-01</lastmod>
     
   </url>
   
   <url>
-    <loc>http://localhost:4000/java/2015/01/20/ascii-art-java-example.html</loc>
+    <loc>https://inspireme.github.io/java/2015/01/20/ascii-art-java-example.html</loc>
     
     <lastmod>2015-01-20</lastmod>
     
   </url>
   
   <url>
-    <loc>http://localhost:4000/other/2015/01/15/optimization-of-jekyll-blog-access-slow-problem.html</loc>
+    <loc>https://inspireme.github.io/other/2015/01/15/optimization-of-jekyll-blog-access-slow-problem.html</loc>
     
     <lastmod>2015-01-15</lastmod>
     
   </url>
   
   <url>
-    <loc>http://localhost:4000/other/2015/01/11/create-jekyll-markdown-by-java.html</loc>
+    <loc>https://inspireme.github.io/other/2015/01/11/create-jekyll-markdown-by-java.html</loc>
     
     <lastmod>2015-01-11</lastmod>
     
   </url>
   
   <url>
-    <loc>http://localhost:4000/java/2015/01/09/java-convert-string-to-enum-object.html</loc>
+    <loc>https://inspireme.github.io/java/2015/01/09/java-convert-string-to-enum-object.html</loc>
     
     <lastmod>2015-01-09</lastmod>
     
   </url>
   
   <url>
-    <loc>http://localhost:4000/java/2015/01/07/final-keyword.html</loc>
+    <loc>https://inspireme.github.io/java/2015/01/07/final-keyword.html</loc>
     
     <lastmod>2015-01-07</lastmod>
     
   </url>
   
   <url>
-    <loc>http://localhost:4000/java/2015/01/04/constructor-init.html</loc>
+    <loc>https://inspireme.github.io/java/2015/01/04/constructor-init.html</loc>
     
     <lastmod>2015-01-04</lastmod>
     
   </url>
   
   <url>
-    <loc>http://localhost:4000/java/2015/01/01/how-to-properly-use-this.html</loc>
+    <loc>https://inspireme.github.io/java/2015/01/01/how-to-properly-use-this.html</loc>
     
     <lastmod>2015-01-01</lastmod>
     
   </url>
   
   <url>
-    <loc>http://localhost:4000/java/2014/12/30/static-biding-and-dynamic-binding-in-java.html</loc>
+    <loc>https://inspireme.github.io/java/2014/12/30/static-biding-and-dynamic-binding-in-java.html</loc>
     
     <lastmod>2014-12-30</lastmod>
     
   </url>
   
   <url>
-    <loc>http://localhost:4000/ilotus/2014/01/04/iLotus.html</loc>
+    <loc>https://inspireme.github.io/ilotus/2014/01/04/iLotus.html</loc>
     
     <lastmod>2014-01-04</lastmod>
     
   </url>
   
   <url>
-    <loc>http://localhost:4000/ilotus/2011/12/02/markdown-roll.html</loc>
+    <loc>https://inspireme.github.io/ilotus/2011/12/02/markdown-roll.html</loc>
     
     <lastmod>2011-12-02</lastmod>
     
@@ -188,7 +188,7 @@
 
   
   <url>
-    <loc>http://localhost:4000/about.html</loc>
+    <loc>https://inspireme.github.io/about.html</loc>
     
     <lastmod>2016-06-26</lastmod>
     
@@ -197,7 +197,7 @@
   </url>
   
   <url>
-    <loc>http://localhost:4000/archives.html</loc>
+    <loc>https://inspireme.github.io/archives.html</loc>
     
     <lastmod>2016-06-26</lastmod>
     
@@ -206,7 +206,7 @@
   </url>
   
   <url>
-    <loc>http://localhost:4000/categories.html</loc>
+    <loc>https://inspireme.github.io/categories.html</loc>
     
     <lastmod>2016-06-26</lastmod>
     
@@ -215,7 +215,7 @@
   </url>
   
   <url>
-    <loc>http://localhost:4000/</loc>
+    <loc>https://inspireme.github.io/</loc>
     
     <lastmod>2016-06-26</lastmod>
     
@@ -224,7 +224,7 @@
   </url>
   
   <url>
-    <loc>http://localhost:4000/links.html</loc>
+    <loc>https://inspireme.github.io/links.html</loc>
     
     <lastmod>2016-06-26</lastmod>
     
@@ -233,7 +233,7 @@
   </url>
   
   <url>
-    <loc>http://localhost:4000/page2/</loc>
+    <loc>https://inspireme.github.io/page2/</loc>
     
     <lastmod>2016-06-26</lastmod>
     
@@ -242,7 +242,7 @@
   </url>
   
   <url>
-    <loc>http://localhost:4000/page3/</loc>
+    <loc>https://inspireme.github.io/page3/</loc>
     
     <lastmod>2016-06-26</lastmod>
     
@@ -251,7 +251,7 @@
   </url>
   
   <url>
-    <loc>http://localhost:4000/page4/</loc>
+    <loc>https://inspireme.github.io/page4/</loc>
     
     <lastmod>2016-06-26</lastmod>
     
