@@ -1,6 +1,10 @@
----
----
-{% for post in site.posts %}
-{{ site.url }}{{ post.url }}{% endfor %}
-{% for page in site.html_pages %}
-{{ site.url }}{{ page.url }}{% endfor %}
+
+https://inspireme.github.io/java/2016/07/05/java8-lambda.html
+https://inspireme.github.io/video/2016/06/26/video.html
+https://inspireme.github.io/markdown/2016/06/01/markdown-roll.html
+
+https://inspireme.github.io/about.html
+https://inspireme.github.io/archives.html
+https://inspireme.github.io/categories.html
+https://inspireme.github.io/
+https://inspireme.github.io/links.html

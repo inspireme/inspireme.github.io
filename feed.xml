@@ -1,29 +1,59 @@
----
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
     <channel>
-        <title>{{ site.title | xml_escape }}</title>
-        <description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>
-        <link>{{ site.url }}</link>
-        <atom:link href="{{ site.url }}{{ site.feed }}" rel="self" type="application/rss+xml" />
-        {% for post in site.posts %}
+        <title>whisper</title>
+        <description>whisper&#39;s homepage</description>
+        <link>https://inspireme.github.io</link>
+        <atom:link href="https://inspireme.github.io/feed.xml" rel="self" type="application/rss+xml" />
+        
             <item>
-                <title>{{ post.title | xml_escape }}</title>
-                {% if post.author.name %}
-                    <dc:creator>{{ post.author.name | xml_escape }}</dc:creator>
-                {% else %}
-                    <dc:creator>{{ site.author.name | xml_escape }}</dc:creator>
-                {% endif %}
-                {% if post.excerpt %}
-                    <description>{{ post.excerpt | xml_escape }}</description>
-                {% else %}
-                    <description>{{ post.content | xml_escape }}</description>
-                {% endif %}
-                <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-                <link>{{ site.url }}{{ post.url }}</link>
-                <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
+                <title>Javaラムダ式</title>
+                
+                    <dc:creator>whisper</dc:creator>
+                
+                
+                    <description>&lt;p&gt;ラムダ式は、JDK1.8で導入された構文。
+関数型インターフェース（抽象メソッドが1つだけ定義されているインターフェース）の変数に代入する箇所ではラムダ式を渡すことが出来る。&lt;br /&gt;
+※インタフェースには一つだけのメソッドといっても、defalut method,static methodに限らない。0個か2個以上でしたら、実装対象のメソッドを決定できない為、
+コンパイルエラーになる&lt;/p&gt;
+
+</description>
+                
+                <pubDate>Tue, 05 Jul 2016 00:00:00 +0000</pubDate>
+                <link>https://inspireme.github.io/java/2016/07/05/java8-lambda.html</link>
+                <guid isPermaLink="true">https://inspireme.github.io/java/2016/07/05/java8-lambda.html</guid>
             </item>
-        {% endfor %}
+        
+            <item>
+                <title>動画配信に関する基礎知識</title>
+                
+                    <dc:creator>whisper</dc:creator>
+                
+                
+                    <description>&lt;p&gt;動画配信に関する基礎知識（VOD, ストリーミングの種類や特徴、HLS/HDSなどの方式や拡張子・コーデック, その他&lt;/p&gt;
+
+</description>
+                
+                <pubDate>Sun, 26 Jun 2016 00:00:00 +0000</pubDate>
+                <link>https://inspireme.github.io/video/2016/06/26/video.html</link>
+                <guid isPermaLink="true">https://inspireme.github.io/video/2016/06/26/video.html</guid>
+            </item>
+        
+            <item>
+                <title>markdownの使い方</title>
+                
+                    <dc:creator>whisper</dc:creator>
+                
+                
+                    <description>&lt;p&gt;Markdown の使い方、API
+&lt;br /&gt;&lt;/p&gt;
+
+</description>
+                
+                <pubDate>Wed, 01 Jun 2016 00:00:00 +0000</pubDate>
+                <link>https://inspireme.github.io/markdown/2016/06/01/markdown-roll.html</link>
+                <guid isPermaLink="true">https://inspireme.github.io/markdown/2016/06/01/markdown-roll.html</guid>
+            </item>
+        
     </channel>
 </rss>
