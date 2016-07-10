@@ -1,3 +1,0 @@
-#inspireme
-
-- whisper's blog 

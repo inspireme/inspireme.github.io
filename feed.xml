@@ -7,6 +7,25 @@
         <atom:link href="https://inspireme.github.io/feed.xml" rel="self" type="application/rss+xml" />
         
             <item>
+                <title>Javaメソッド参照</title>
+                
+                    <dc:creator>whisper</dc:creator>
+                
+                
+                    <description>&lt;p&gt;メソッド参照は、JDK1.8で導入された構文。
+関数型インターフェース（抽象メソッドが1つだけ定義されているインターフェース）の変数にメソッドそのものを代入することが出来る。&lt;br /&gt;
+※メソッド参照の形式は常に以下の２種となる。&lt;br /&gt;
+①クラス名::メソッド名(staticメソッド)&lt;br /&gt;
+②インスタンス変数名::メソッド名(インスタンスメソッド)&lt;br /&gt;&lt;/p&gt;
+
+</description>
+                
+                <pubDate>Sun, 10 Jul 2016 00:00:00 +0000</pubDate>
+                <link>https://inspireme.github.io/java/2016/07/10/java8-methodreference.html</link>
+                <guid isPermaLink="true">https://inspireme.github.io/java/2016/07/10/java8-methodreference.html</guid>
+            </item>
+        
+            <item>
                 <title>Javaラムダ式</title>
                 
                     <dc:creator>whisper</dc:creator>
