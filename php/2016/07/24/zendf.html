@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html id="J-html" class="">
+<head>
+    <meta charset="UTF-8" />
+    <title>
+        
+            初めてのPHP プログラミング            
+        
+        (whisper's Programming MemoPage)
+    </title>
+    <meta name="generator" content="Jekyll" />
+    <meta name="author" content="whisper" />
+    <meta name="description" content="初めてのPHP プログラミング" />
+    <meta name="keywords" content="php zendf" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="all" href="https://inspireme.github.io/static/style.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="https://inspireme.github.io/static/syntax.css" />
+    <!--[if lt IE 9]>
+    <script src="https://inspireme.github.io/static/js/html5.js" type="text/javascript"></script>
+    <![endif]-->
+    <script src="https://inspireme.github.io/static/js/jquery.js" type="text/javascript"></script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" class="home blog lotus index">
+    <nav class="lotus-nav">
+        <ul>
+            
+            
+            
+            
+            
+            <li class="home ">
+                <a href="/index.html" rel="bookmark" title="Home">
+                    <i class="icon-home"></i>
+                </a>
+                
+            </li>
+            
+            
+            
+            
+            
+            <li class="">
+                <a href="/categories.html" rel="bookmark" title="Categories">
+                    <i class="icon-list-alt"></i>
+                </a>
+                
+            </li>
+            
+            
+            
+            
+            
+            <li class="">
+                <a href="/archives.html" rel="bookmark" title="Archives">
+                    <i class="icon-reorder"></i>
+                </a>
+                
+            </li>
+            
+            
+            
+            
+            
+            <li class="">
+                <a href="/about.html" rel="bookmark" title="About Me">
+                    <i class="icon-user"></i>
+                </a>
+                
+            </li>
+            
+            
+            
+            
+            
+            <li class="">
+                <a href="mailto:cndone@gmail.com" rel="bookmark" title="Contact Me">
+                    <i class="icon-envelope-alt"></i>
+                </a>
+                
+            </li>
+            
+            
+            
+            
+            
+            <li class="">
+                <a href="https://github.com/inspireme" rel="bookmark" title="Github">
+                    <i class="icon-github"></i>
+                </a>
+                
+            </li>
+            
+        </ul>
+    </nav>
+
+    <p class="lotus-breadcrub">
+    <a href="https://inspireme.github.io/index.html" rel="nofollow" rel="nofollow" title="ホームページ">Home</a>
+    <span> &gt; </span>
+    <a href="https://inspireme.github.io/archives.html" rel="nofollow" >Archives</a>
+    <span> &gt; </span>
+    初めてのPHP プログラミング
+</p>
+<h1 class="lotus-pagetit">初めてのPHP プログラミング</h1>
+
+<p class="lotus-meta">Publish: <time class="date" pubdate="July 24, 2016">July 24, 2016</time></p>
+
+<article  itemscope itemtype="http://schema.org/Article" class="lotus-post lotus-post-columns-1">
+<p>ZendFrameworkを基づき、PHP開発フレームワークの構成に行う</p>
+
+<ul>
+  <li>
+    <p><a href="#1-ref">開発環境構築</a></p>
+  </li>
+  <li>
+    <p><a href="#2-ref">ZendFramework利用</a></p>
+  </li>
+</ul>
+
+<h4> <p id="1-ref">開発環境構築</p></h4>
+<hr />
+
+<p>必須ツールとパッケージとのダウンロード・インストール</p>
+
+<table>
+    <thead>
+
+    </thead>
+    <tbody>
+    <tr>
+          <td>ZendFramework-1.11.11
+       </td>
+           <td>
+           <a href="https://framework.zend.com/downloads/archives" target="_blank">ダウンロード</a>
+       </td>
+     </tr>
+     <tr>
+          <td>xamppV3.2.2
+       </td>
+           <td>
+           
+          <p> 「mysql」、「tomcat」、「phpmyadmin」を含めて、すべてのインストールコンポーネントをインストールしておく。 
+            <a href="http://techacademy.jp/magazine/1722">[techacademyさんのxamppをインストールする]</a></p>
+
+		<code>ポート衝突に対する対策。</code>
+		<p><b>1)Skype</b></p>
+		<p>&gt;&gt; Skypeのメニュー「ツール」☞「設定」をクリックし、設定画面が表示される。その設定画面には「接続」をクリックし、「上記のポートに代わりに、ポート80と443を使用」とのチェックボックスを外して「保存」ボタンを押下する</p>
+		<p><b>2)VMware Tray Process</b></p>
+		<p>&gt;&gt; タスクマネージャーに該当するプロセスを止めておく</p>
+		
+       </td>
+     </tr>
+          <tr>
+          <td>PHP5.63
+       </td>
+       <td>
+           <p>（xamppwoがインストールされたら、xamppのインストールフォルダの直下にPHP関連フォルダが見当たるはずだ.）</p>
+           <p><b>zendframeworkを利用するために、Zend Frameworkのライブラリ（Coreが含まれるディレクトリ）をPHPのinclude_pathに含める。実現方法が三つである</b></p>
+           <p>１）php.iniのinclude_pathディレクティブにZend Frameworkのlibraryディレクトリへのパスを追加する</p>
+           <code>include_path = ".;C:/Development/application/library"</code>710行目
+           
+           <p>２）PHPファイルの先頭に、set_include_pathメソッドを呼び出す</p>
+           <p>３）Zend Frameworkのライブラリ（Zend/*）をAPPのlibraryディレクトリにコープする</p>
+           <p>※今回のサンプルには方法３）を使っている	</p>
+           
+           <p><b>PHP PATH(環境変数)の設定</b></p>
+           <code>PATH=C:\xampp\php</code>
+
+           
+       </td>
+     </tr>
+       <tr>
+          <td>apache
+       </td>
+       <td>
+           （xamppwoがインストールされたら、xamppのインストールフォルダの直下にapache関連フォルダが見当たるはずだ）
+           <p><b>１）httpd.confの設定</b></p>
+           Zend FrameworkのMVCモデルを使用するには、まずApache HTTP Serverのmod_rewriteを有効にする必要がある。
+           httpd.conf内でrewrite_moduleがロードされていることを確認し、ルートディレクトリのAllowOverrideディレクティブの設定を変更する。
+           そうしないと、403エラー(Access forbidden!)とのエラーが発生する。<br />
+   
+<figure class="highlight"><pre><code class="language-java" data-lang="java">   <span class="o">&lt;</span><span class="n">Directory</span> <span class="nl">C:</span><span class="err">\</span><span class="n">xampp</span><span class="err">\</span><span class="n">htdocs</span><span class="err">\</span><span class="n">PhpDemo</span><span class="err">\</span><span class="kd">public</span><span class="o">&gt;</span>
+        <span class="n">DirectoryIndex</span> <span class="n">index</span><span class="o">.</span><span class="na">php</span>
+        <span class="n">AllowOverride</span> <span class="n">All</span>
+        <span class="n">Order</span> <span class="n">allow</span><span class="o">,</span><span class="n">deny</span>
+        <span class="n">Allow</span> <span class="n">from</span> <span class="n">all</span>
+    <span class="o">&lt;/</span><span class="n">Directory</span><span class="o">&gt;</span>
+  </code></pre></figure>
+
+  
+  <p><b>2）httpd-vhosts.confの設定</b></p>
+  もしVirtualHostを使う要望が出てきたら、「１）httpd.confの設定」を廃棄し、%apache_home%/conf/extra/httpd-vhosts.confに以下の設定を行う
+     
+<figure class="highlight"><pre><code class="language-java" data-lang="java">     <span class="o">&lt;</span><span class="n">VirtualHost</span> <span class="o">*:</span><span class="mi">80</span><span class="o">&gt;</span>
+    <span class="n">ServerName</span> <span class="n">PhpDemo</span><span class="o">.</span><span class="na">local</span>
+    <span class="n">DocumentRoot</span> <span class="nl">C:</span><span class="err">\</span><span class="n">xampp</span><span class="err">\</span><span class="n">htdocs</span><span class="err">\</span><span class="n">PhpDemo</span><span class="err">\</span><span class="kd">public</span>
+ 
+    <span class="n">SetEnv</span> <span class="n">APPLICATION_ENV</span> <span class="s">"development"</span>
+ 
+    <span class="o">&lt;</span><span class="n">Directory</span> <span class="nl">C:</span><span class="err">\</span><span class="n">xampp</span><span class="err">\</span><span class="n">htdocs</span><span class="err">\</span><span class="n">PhpDemo</span><span class="err">\</span><span class="kd">public</span><span class="o">&gt;</span>
+        <span class="n">DirectoryIndex</span> <span class="n">index</span><span class="o">.</span><span class="na">php</span>
+        <span class="n">AllowOverride</span> <span class="n">All</span>
+        <span class="n">Order</span> <span class="n">allow</span><span class="o">,</span><span class="n">deny</span>
+        <span class="n">Allow</span> <span class="n">from</span> <span class="n">all</span>
+    <span class="o">&lt;/</span><span class="n">Directory</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">VirtualHost</span><span class="o">&gt;</span>
+     </code></pre></figure>
+
+
+           
+       </td>
+     </tr>
+       <tr>
+          <td>mysql
+       </td>
+       <td>
+           （xamppwoがインストールされたら、xamppのインストールフォルダの直下にmysql関連フォルダが見当たるはずだ）<br />
+           <p><b>１）DBユーザのパスワードの初期化</b></p>
+           <p>xamppwoをインストールする間にMysqlのSIDとPWDなど情報入力の画面が表示されないため、DBのSIDとPWDがデフォルト値に設定されるはずだと見込んでいる。
+          （ http://localhost/phpmyamdinをアクセスして、「mysql」DBを選択し、「user」テーブルには「password」列に空である二件レコードしかないんだ。）</p>
+          <p>なので、以下の設定を行っとく</p>
+          <image src="/static/images/mysql_changepwd.png" width="600px" height="500px" />
+           
+       </td>
+     </tr>
+      <tr>
+          <td>NetBeans 8.1
+       </td>
+       <td>
+       <p>NetBeansのメニュー「ツール」☞「オプション」をクリックし、「オプション」画面が表示される。その画面に、「PHP」タブ☞「フレームワーク及びツール」タブをクリックし、
+       NetBeansに提供されるフレームワーク及びツール一覧が見える。</p>
+       <p><b>１）zendのスクリプトを設定</b></p>
+       <code>E:\99.Workspace\phpspace\ZendFramework-1.11.11\bin\zf.bat</code><br />       
+       </td>
+     </tr>
+       
+	</tbody>	
+</table>
+
+<h4> <p id="2-ref">ZendFramework利用</p></h4>
+<hr />
+
+<ul>
+  <li>ZendFrameworkをベースとするPHPプロジェクトを作成</li>
+</ul>
+
+<image src="/static/images/create_zendf.png" width="500px" height="270px" />
+
+<ul>
+  <li>レイアウトを作成</li>
+</ul>
+
+<p>プロジェクトに右クリックし、「Zend」☞「コマンド実行」をクリックしたら、「Zendコマンドの実行」子画面がポップアップされてくる</p>
+
+<p><code>% zf enable layout</code>を実行したら、<br /></p>
+
+<p>application/configs/application.iniのproductセクションに以下内容が追加される</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">resources</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">layoutPath</span> <span class="o">=</span> <span class="n">APPLICATION_PATH</span> <span class="s">"/layouts/scripts"</span></code></pre></figure>
+
+<p>且つ、application/layouts/scripts/layout.phtmlが作られる。</p>
+
+<p>そして、application/configs/application.iniのproductセクションに手動的に以下の内容を追加する</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">resources</span><span class="o">.</span><span class="na">view</span><span class="o">[]</span> <span class="o">=</span></code></pre></figure>
+
+<ul>
+  <li>モジュールを作成</li>
+</ul>
+
+<table>
+    <thead>
+     
+    </thead>
+    <tbody>
+     <tr>
+          <td>
+   データベースを作成
+		</td>
+          <td>
+          
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">production</span> <span class="nl">DB:</span><span class="n">phpdb</span>
+<span class="n">test</span> <span class="nl">DB:</span><span class="n">phpdb</span>
+<span class="n">development</span> <span class="nl">DB:</span><span class="n">phpdb</span>
+<span class="err">※</span><span class="n">user</span><span class="o">/</span><span class="nl">pwd:</span><span class="n">phpdbuser</span><span class="o">/</span><span class="n">phpdbuser</span></code></pre></figure>
+
+
+ </td>
+     </tr>
+     <tr>
+          <td>
+db-adapterを設定
+</td>
+          <td>
+          Zendコマンド実行画面で下記コマンドを実行する
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="err">$</span> <span class="n">zf</span> <span class="n">configure</span> <span class="n">db</span><span class="o">-</span><span class="n">adapter</span> <span class="s">"adapter=PDO_MYSQL&amp;dbname=phpdb&amp;host=localhost
+&amp;username=phpdbuser&amp;password=phpdbuser"</span> <span class="n">production</span>
+<span class="err">$</span> <span class="n">zf</span> <span class="n">configure</span> <span class="n">db</span><span class="o">-</span><span class="n">adapter</span> <span class="s">"dbname=phpdbtest&amp;host=localhost
+&amp;username=phpdbuser&amp;password=phpdbuser"</span> <span class="n">testing</span>
+<span class="err">$</span> <span class="n">zf</span> <span class="n">configure</span> <span class="n">db</span><span class="o">-</span><span class="n">adapter</span> <span class="s">"dbname=phpdbdev&amp;host=localhost
+&amp;username=phpdbuser&amp;password=phpdbuser"</span> <span class="n">development</span></code></pre></figure>
+
+ </td>
+     </tr>
+     <tr>
+          <td>
+DB初期化
+
+</td>
+          <td>
+          
+/script/data.mysql.sql
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">INSERT</span> <span class="n">INTO</span> <span class="nf">guestbook</span> <span class="o">(</span><span class="n">email</span><span class="o">,</span> <span class="n">comment</span><span class="o">,</span> <span class="n">created</span><span class="o">)</span> <span class="n">VALUES</span>
+<span class="o">(</span><span class="err">'</span><span class="n">ralph</span><span class="o">.</span><span class="na">schindler</span><span class="nd">@zend</span><span class="o">.</span><span class="na">com</span><span class="err">'</span><span class="o">,</span> <span class="err">'</span><span class="n">Hello</span><span class="o">!</span> <span class="n">Enjoy</span> <span class="k">this</span> <span class="n">sample</span> <span class="n">zf</span> <span class="n">application</span><span class="o">!</span><span class="err">'</span><span class="o">,</span> <span class="err">'</span><span class="mi">2012</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span> <span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="err">'</span><span class="o">),</span>
+<span class="o">(</span><span class="err">'</span><span class="n">foo</span><span class="nd">@bar</span><span class="o">.</span><span class="na">com</span><span class="err">'</span><span class="o">,</span> <span class="err">'</span><span class="n">Baz</span> <span class="n">baz</span> <span class="n">baz</span><span class="o">,</span> <span class="n">baz</span> <span class="n">baz</span> <span class="n">Baz</span> <span class="n">baz</span> <span class="n">baz</span> <span class="o">-</span> <span class="n">baz</span> <span class="n">baz</span> <span class="n">baz</span><span class="o">.</span><span class="err">'</span><span class="o">,</span> <span class="err">'</span><span class="mi">2012</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span> <span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="o">:</span><span class="mi">00</span><span class="err">'</span><span class="o">);</span></code></pre></figure>
+
+
+/script/schema.mysql.sql
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">DROP</span> <span class="n">TABLE</span> <span class="n">IF</span> <span class="n">EXISTS</span> <span class="n">guestbook</span><span class="o">;</span>
+
+<span class="n">CREATE</span> <span class="n">TABLE</span> <span class="nf">guestbook</span> <span class="o">(</span>
+    <span class="n">id</span> <span class="kt">int</span> <span class="n">NOT</span> <span class="n">NULL</span> <span class="n">AUTO_INCREMENT</span><span class="o">,</span>
+    <span class="n">email</span> <span class="nf">varchar</span><span class="o">(</span><span class="mi">32</span><span class="o">)</span> <span class="n">NOT</span> <span class="n">NULL</span> <span class="n">DEFAULT</span> <span class="err">'</span><span class="n">noemail</span><span class="nd">@example</span><span class="o">.</span><span class="na">com</span><span class="err">'</span><span class="o">,</span>
+    <span class="n">comment</span> <span class="n">TEXT</span> <span class="n">NULL</span><span class="o">,</span>
+    <span class="n">created</span> <span class="n">DATETIME</span> <span class="n">NOT</span> <span class="n">NULL</span><span class="o">,</span>
+    <span class="n">PRIMARY</span> <span class="nf">KEY</span> <span class="o">(</span><span class="n">id</span><span class="o">)</span>
+<span class="o">)</span> <span class="n">ENGINE</span><span class="o">=</span><span class="n">MyISAM</span> <span class="n">DEFAULT</span> <span class="n">CHARSET</span><span class="o">=</span><span class="n">utf8</span><span class="o">;</span>
+ 
+<span class="n">CREATE</span> <span class="n">INDEX</span> <span class="n">id</span> <span class="n">ON</span> <span class="nf">guestbook</span><span class="o">(</span><span class="n">id</span><span class="o">);</span></code></pre></figure>
+
+
+/script/load.mysql.php（略）
+※Utilみたい<br />
+
+ <p>DOS のコマンドラインから以下を実行することで、DB初期を終わらせる</p>
+<code> % php scripts/load.mysql.php --withdata</code><br />
+「-e」オプションを使うとAPPLICATION_ENV定数に使用する値を指定できます。
+ 
+ </td>
+     </tr>
+
+<tr>
+<td>
+     db-tableを作成
+</td>
+<td>
+<code>% zf create db-table Guestbook guestbook</code>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">Application_Model_DbTable_Guestbook</span> <span class="kd">extends</span> <span class="n">Zend_Db_Table_Abstract</span>
+<span class="o">{</span>
+    <span class="cm">/** Table name */</span>
+    <span class="kd">protected</span> <span class="n">$_name</span>    <span class="o">=</span> <span class="err">'</span><span class="n">guestbook</span><span class="err">'</span><span class="o">;</span>
+<span class="o">}</span></code></pre></figure>
+
+</td>
+</tr>
+
+<tr>
+<td>
+modelを作成
+</td>
+<td>
+<code>% zf create model GuestbookMapper</code>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">Application_Model_GuestbookMapper</span>
+<span class="o">{</span>
+    <span class="kd">protected</span> <span class="n">$_dbTable</span><span class="o">;</span> 
+    <span class="kd">public</span> <span class="n">function</span> <span class="nf">setDbTable</span><span class="o">(</span><span class="n">$dbTable</span><span class="o">)</span>
+    <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">is_string</span><span class="o">(</span><span class="n">$dbTable</span><span class="o">))</span> <span class="o">{</span>
+            <span class="n">$dbTable</span> <span class="o">=</span> <span class="k">new</span> <span class="n">$dbTable</span><span class="o">();</span>
+        <span class="o">}</span>
+        <span class="k">if</span> <span class="o">(!</span><span class="n">$dbTable</span> <span class="k">instanceof</span> <span class="n">Zend_Db_Table_Abstract</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">throw</span> <span class="k">new</span> <span class="nf">Exception</span><span class="o">(</span><span class="err">'</span><span class="n">Invalid</span> <span class="n">table</span> <span class="n">data</span> <span class="n">gateway</span> <span class="n">provided</span><span class="err">'</span><span class="o">);</span>
+        <span class="o">}</span>
+        <span class="n">$this</span><span class="o">-&gt;</span><span class="n">_dbTable</span> <span class="o">=</span> <span class="n">$dbTable</span><span class="o">;</span>
+        <span class="k">return</span> <span class="n">$this</span><span class="o">;</span>
+    <span class="o">}</span> 
+    <span class="kd">public</span> <span class="n">function</span> <span class="nf">getDbTable</span><span class="o">()</span>
+    <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="kc">null</span> <span class="o">===</span> <span class="n">$this</span><span class="o">-&gt;</span><span class="n">_dbTable</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">$this</span><span class="o">-&gt;</span><span class="n">setDbTable</span><span class="o">(</span><span class="err">'</span><span class="n">Application_Model_DbTable_Guestbook</span><span class="err">'</span><span class="o">);</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="n">$this</span><span class="o">-&gt;</span><span class="n">_dbTable</span><span class="o">;</span>
+    <span class="o">}</span>    
+    <span class="kd">public</span> <span class="n">function</span> <span class="nf">save</span><span class="o">(</span><span class="n">$model</span><span class="o">){</span>
+    <span class="o">......</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="n">function</span> <span class="nf">find</span><span class="o">(</span><span class="n">$id</span><span class="o">,</span> <span class="n">$model</span><span class="o">){</span>
+    <span class="o">......</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="n">function</span> <span class="nf">fetchAll</span><span class="o">(){</span>
+    <span class="o">......</span>    
+    <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+
+<code>% zf create model Guestbook</code>
+
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">Application_Model_Guestbook</span>
+<span class="o">{</span>
+    <span class="kd">protected</span> <span class="n">$_comment</span><span class="o">;</span>
+    <span class="kd">protected</span> <span class="n">$_created</span><span class="o">;</span>
+    <span class="kd">protected</span> <span class="n">$_email</span><span class="o">;</span>
+    <span class="kd">protected</span> <span class="n">$_id</span><span class="o">;</span>
+    
+     <span class="kd">public</span> <span class="n">function</span> <span class="nf">__construct</span><span class="o">(</span><span class="n">array</span> <span class="n">$options</span> <span class="o">=</span> <span class="kc">null</span><span class="o">)</span>
+    <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">is_array</span><span class="o">(</span><span class="n">$options</span><span class="o">))</span> <span class="o">{</span>
+            <span class="n">$this</span><span class="o">-&gt;</span><span class="n">setOptions</span><span class="o">(</span><span class="n">$options</span><span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+ 
+    <span class="kd">public</span> <span class="n">function</span> <span class="nf">__set</span><span class="o">(</span><span class="n">$name</span><span class="o">,</span> <span class="n">$value</span><span class="o">)</span>
+    <span class="o">{</span>
+        <span class="n">$method</span> <span class="o">=</span> <span class="err">'</span><span class="n">set</span><span class="err">'</span> <span class="o">.</span> <span class="n">$name</span><span class="o">;</span>
+        <span class="k">if</span> <span class="o">((</span><span class="err">'</span><span class="n">mapper</span><span class="err">'</span> <span class="o">==</span> <span class="n">$name</span><span class="o">)</span> <span class="o">||</span> <span class="o">!</span><span class="n">method_exists</span><span class="o">(</span><span class="n">$this</span><span class="o">,</span> <span class="n">$method</span><span class="o">))</span> <span class="o">{</span>
+            <span class="k">throw</span> <span class="k">new</span> <span class="nf">Exception</span><span class="o">(</span><span class="err">'</span><span class="n">Invalid</span> <span class="n">guestbook</span> <span class="n">property</span><span class="err">'</span><span class="o">);</span>
+        <span class="o">}</span>
+        <span class="n">$this</span><span class="o">-&gt;</span><span class="n">$method</span><span class="o">(</span><span class="n">$value</span><span class="o">);</span>
+    <span class="o">}</span>
+ 
+    <span class="kd">public</span> <span class="n">function</span> <span class="nf">__get</span><span class="o">(</span><span class="n">$name</span><span class="o">)</span>
+    <span class="o">{</span>
+        <span class="n">$method</span> <span class="o">=</span> <span class="err">'</span><span class="n">get</span><span class="err">'</span> <span class="o">.</span> <span class="n">$name</span><span class="o">;</span>
+        <span class="k">if</span> <span class="o">((</span><span class="err">'</span><span class="n">mapper</span><span class="err">'</span> <span class="o">==</span> <span class="n">$name</span><span class="o">)</span> <span class="o">||</span> <span class="o">!</span><span class="n">method_exists</span><span class="o">(</span><span class="n">$this</span><span class="o">,</span> <span class="n">$method</span><span class="o">))</span> <span class="o">{</span>
+            <span class="k">throw</span> <span class="k">new</span> <span class="nf">Exception</span><span class="o">(</span><span class="err">'</span><span class="n">Invalid</span> <span class="n">guestbook</span> <span class="n">property</span><span class="err">'</span><span class="o">);</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="n">$this</span><span class="o">-&gt;</span><span class="n">$method</span><span class="o">();</span>
+    <span class="o">}</span>
+ 
+    <span class="kd">public</span> <span class="n">function</span> <span class="nf">setOptions</span><span class="o">(</span><span class="n">array</span> <span class="n">$options</span><span class="o">)</span>
+    <span class="o">{</span>
+        <span class="n">$methods</span> <span class="o">=</span> <span class="n">get_class_methods</span><span class="o">(</span><span class="n">$this</span><span class="o">);</span>
+        <span class="n">foreach</span> <span class="o">(</span><span class="n">$options</span> <span class="n">as</span> <span class="n">$key</span> <span class="o">=&gt;</span> <span class="n">$value</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">$method</span> <span class="o">=</span> <span class="err">'</span><span class="n">set</span><span class="err">'</span> <span class="o">.</span> <span class="n">ucfirst</span><span class="o">(</span><span class="n">$key</span><span class="o">);</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">in_array</span><span class="o">(</span><span class="n">$method</span><span class="o">,</span> <span class="n">$methods</span><span class="o">))</span> <span class="o">{</span>
+                <span class="n">$this</span><span class="o">-&gt;</span><span class="n">$method</span><span class="o">(</span><span class="n">$value</span><span class="o">);</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="n">$this</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="n">function</span> <span class="nf">setId</span><span class="o">(</span><span class="n">$id</span><span class="o">)</span>
+    <span class="o">{</span>
+        <span class="n">$this</span><span class="o">-&gt;</span><span class="n">_id</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="n">$id</span><span class="o">;</span>
+        <span class="k">return</span> <span class="n">$this</span><span class="o">;</span>
+    <span class="o">}</span>
+ 
+    <span class="kd">public</span> <span class="n">function</span> <span class="nf">getId</span><span class="o">()</span>
+    <span class="o">{</span>
+        <span class="k">return</span> <span class="n">$this</span><span class="o">-&gt;</span><span class="n">_id</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="c1">//以下省略</span>
+<span class="o">}</span></code></pre></figure>
+
+</td>
+</tr>
+
+<tr>
+<td>
+controllerを作成
+</td>
+<td>
+<code>% zf create controller Guestbook</code>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">GuestbookController</span> <span class="kd">extends</span> <span class="n">Zend_Controller_Action</span>
+<span class="o">{</span>
+    <span class="kd">public</span> <span class="n">function</span> <span class="nf">indexAction</span><span class="o">()</span>
+    <span class="o">{</span>
+        <span class="n">$guestbook</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Application_Model_GuestbookMapper</span><span class="o">();</span>
+        <span class="n">$this</span><span class="o">-&gt;</span><span class="n">view</span><span class="o">-&gt;</span><span class="n">entries</span> <span class="o">=</span> <span class="n">$guestbook</span><span class="o">-&gt;</span><span class="n">fetchAll</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>コントローラにメソッドを使おうとしたら、XXXActionの命名規約を守ること。
+そしてapplication/views/scripts/モジュール名/メソッド名.phtmlを追加しないとならない。ただメソッドにforwordまたはredirectをするのなら、追加必要がない</p>
+$this-&gt;_redirect('/guestbook/index?msg=' . $result);//追加必要がない<br />
+$this-&gt;view-&gt;entries = $guestbook-&gt;fetchAll();//追加するべきだ。$this-&gt;viewはメソッド名.htmlと紐づけているデフォルト仕組みがあるのかもしれない。
+
+
+</td>
+</tr>
+     
+ 	</tbody>	
+</table>
+
+<ul>
+  <li>htaccessファイルの作成</li>
+</ul>
+
+<p>Zend Frameworkで推奨されている.htaccessファイルの設定は拡張子がjs、ico、gif、jpg、png、css以外のファイルに対するアクセスをindex.phpへのアクセスへrewriteする設定になる。
+これをZend Frameworkを使用するアプリケーションのルートディレクトリに配置して、PHPスクリプトへのアクセスをindex.phpで一括制御します。</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">RewriteEngine</span> <span class="n">on</span>
+<span class="n">RewriteRule</span> <span class="o">!</span><span class="err">\</span><span class="o">.(</span><span class="n">js</span><span class="o">|</span><span class="n">ico</span><span class="o">|</span><span class="n">gif</span><span class="o">|</span><span class="n">jpg</span><span class="o">|</span><span class="n">png</span><span class="o">|</span><span class="n">css</span><span class="o">)</span><span class="err">$</span> <span class="n">index</span><span class="o">.</span><span class="na">php</span></code></pre></figure>
+
+<p>デフォルト設定は以下となり、js、ico、gif、jpg、png、cssなどファイルを<mark>publicフォルダ</mark>におかないと、index.phpに制御されため、アクセスすることができない</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">RewriteEngine</span> <span class="n">On</span>
+<span class="n">RewriteCond</span> <span class="o">%{</span><span class="n">REQUEST_FILENAME</span><span class="o">}</span> <span class="o">-</span><span class="n">s</span> <span class="o">[</span><span class="n">OR</span><span class="o">]</span>
+<span class="n">RewriteCond</span> <span class="o">%{</span><span class="n">REQUEST_FILENAME</span><span class="o">}</span> <span class="o">-</span><span class="n">l</span> <span class="o">[</span><span class="n">OR</span><span class="o">]</span>
+<span class="n">RewriteCond</span> <span class="o">%{</span><span class="n">REQUEST_FILENAME</span><span class="o">}</span> <span class="o">-</span><span class="n">d</span>
+<span class="n">RewriteRule</span> <span class="o">^.*</span><span class="err">$</span> <span class="o">-</span> <span class="o">[</span><span class="n">NC</span><span class="o">,</span><span class="n">L</span><span class="o">]</span>
+<span class="n">RewriteRule</span> <span class="o">^.*</span><span class="err">$</span> <span class="n">index</span><span class="o">.</span><span class="na">php</span> <span class="o">[</span><span class="n">NC</span><span class="o">,</span><span class="n">L</span><span class="o">]</span></code></pre></figure>
+
+<ul>
+  <li>関連資料：</li>
+</ul>
+
+<p><a href="https://framework.zend.com/manual/1.11/ja/learning.html">Learning Zend Framework</a><br />
+<a href="http://jes.st/2012/zend-framework-quickstart-with-mysql/">jesさんのZEND FRAMEWORK QUICKSTART WITH MYSQL</a></p>
+
+
+</article>
+	
+<p class="lotus-anno">Disclaimer: This article is based on  <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="nofollow" target="_blank" title="表示-非営利-継承">BY-NC-SA</a> license. Reproduced please specify switched from: <a href="" title="" rel="nofollow">whisper</a></p>
+    
+<section class="lotus-nextpage fn-clear">
+    
+    <div class="lotus-nextpage-left"><a class="prev" href="/java/2016/07/10/java8-methodreference.html" rel="prev">&laquo;&nbsp;Javaメソッド参照</a></div>
+    
+    
+</section>
+
+
+<footer class="lotus-footer">
+	<p>Copyright © 2011–2016 whisper All rights reserved. Design by <a href="http://www.zhanxin.info" target="_blank">zhanxin</a>.</p>
+</footer>
+<script src="https://inspireme.github.io/static/js/jquery.scrollTo.js" type="text/javascript"></script>
+<script src="https://inspireme.github.io/static/js/iLotus.js" type="text/javascript"></script>
+</body>
+</html>

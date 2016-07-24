@@ -7,6 +7,21 @@
         <atom:link href="https://inspireme.github.io/feed.xml" rel="self" type="application/rss+xml" />
         
             <item>
+                <title>初めてのPHP プログラミング</title>
+                
+                    <dc:creator>whisper</dc:creator>
+                
+                
+                    <description>&lt;p&gt;ZendFrameworkを基づき、PHP開発フレームワークの構成に行う&lt;/p&gt;
+
+</description>
+                
+                <pubDate>Sun, 24 Jul 2016 00:00:00 +0000</pubDate>
+                <link>https://inspireme.github.io/php/2016/07/24/zendf.html</link>
+                <guid isPermaLink="true">https://inspireme.github.io/php/2016/07/24/zendf.html</guid>
+            </item>
+        
+            <item>
                 <title>Javaメソッド参照</title>
                 
                     <dc:creator>whisper</dc:creator>

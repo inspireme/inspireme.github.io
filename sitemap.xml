@@ -4,11 +4,18 @@
   <!--  Homepage -->
   <url>
     <loc>https://inspireme.github.io/</loc>
-    <lastmod>2016-07-10</lastmod>
+    <lastmod>2016-07-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
+  
+  <url>
+    <loc>https://inspireme.github.io/php/2016/07/24/zendf.html</loc>
+    
+    <lastmod>2016-07-24</lastmod>
+    
+  </url>
   
   <url>
     <loc>https://inspireme.github.io/java/2016/07/10/java8-methodreference.html</loc>
@@ -43,7 +50,7 @@
   <url>
     <loc>https://inspireme.github.io/about.html</loc>
     
-    <lastmod>2016-07-10</lastmod>
+    <lastmod>2016-07-24</lastmod>
     
     
     
@@ -52,7 +59,7 @@
   <url>
     <loc>https://inspireme.github.io/archives.html</loc>
     
-    <lastmod>2016-07-10</lastmod>
+    <lastmod>2016-07-24</lastmod>
     
     
     
@@ -61,7 +68,7 @@
   <url>
     <loc>https://inspireme.github.io/categories.html</loc>
     
-    <lastmod>2016-07-10</lastmod>
+    <lastmod>2016-07-24</lastmod>
     
     
     
@@ -70,7 +77,7 @@
   <url>
     <loc>https://inspireme.github.io/</loc>
     
-    <lastmod>2016-07-10</lastmod>
+    <lastmod>2016-07-24</lastmod>
     
     
     
@@ -79,7 +86,7 @@
   <url>
     <loc>https://inspireme.github.io/links.html</loc>
     
-    <lastmod>2016-07-10</lastmod>
+    <lastmod>2016-07-24</lastmod>
     
     
     
